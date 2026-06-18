@@ -1,0 +1,165 @@
+/* ============================================================
+   BESA Energy — Subpage Overrides
+   Lädt zusätzlich zu styles.css auf den Leistungs-Unterseiten,
+   um Sektionen ans Editorial-Industrial-Design der Landingpage
+   anzugleichen.
+   ============================================================ */
+
+/* CTA-Banner (Footer-CTA der Subpages) — weg vom roten Klotz, rein
+   in den ruhigen Anthrazit-Look mit Stahlblau-Akzenten. */
+.subpage-cta {
+    background: var(--color-anthracite-dark, #1F2021);
+    color: var(--color-white);
+    padding: clamp(3.5rem, 8vw, 6rem) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.subpage-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 20% 0%, rgba(91, 167, 209, 0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 100% 100%, rgba(91, 167, 209, 0.08) 0%, transparent 55%);
+    pointer-events: none;
+}
+
+.subpage-cta > .container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 760px;
+}
+
+.subpage-cta .section-label {
+    color: var(--color-steel-blue-light, #8AC6E8);
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+}
+
+.subpage-cta h2 {
+    color: var(--color-white);
+    font-size: clamp(1.75rem, 3.5vw + 0.5rem, 2.75rem);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem;
+}
+
+/* `.text-gradient` ist global in styles.css definiert als
+   hellblauer Stahlblau-Highlight mit weichem Schatten — wir lassen
+   das hier wirken, damit der Akzent auf den Subpage-CTAs identisch
+   aussieht wie auf der LP-Hero und auf den Legal-Page-Heros.
+   Frühere Override-Variante mit Background-Clip-Gradient entfernt
+   (10.05.2026), weil die globalen Schatten den Gradient dunkel
+   ziehen und der Text auf dem Anthrazit-Hintergrund unlesbar wurde. */
+
+.subpage-cta p.cta-lead {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    margin: 0 auto 2rem;
+    max-width: 580px;
+}
+
+.subpage-cta-actions {
+    display: flex;
+    gap: 0.875rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.subpage-cta-actions .btn {
+    min-width: 220px;
+}
+
+.subpage-cta-trust {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subpage-cta-trust span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.subpage-cta-trust svg {
+    width: 14px;
+    height: 14px;
+    color: var(--color-success, #10B981);
+    flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .subpage-cta-actions .btn {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* Stat-Cards: auf Subpages Stahlblau statt Rot.
+   Auf der LP bleiben die Werte bewusst BESA-Rot (Brand-Akzent),
+   hier sollen sie ruhiger im Editorial-Industrial-Look sitzen. */
+.stat-value {
+    color: var(--color-steel-blue-dark, #3F87B0) !important;
+}
+
+/* Image-Banner: kein Foto mehr (war thematisch oft falsch und
+   die Originale fehlten teilweise). Stattdessen einheitliches
+   BESA-Anthrazit mit dezenter Stahlblau-Aurora — derselbe
+   Look wie der Subpage-CTA, damit beide Banner auf privat,
+   gewerbe und energieversorger zusammen ein konsistentes
+   Editorial-Industrial-Erscheinungsbild ergeben. */
+.image-banner {
+    background: var(--color-anthracite-dark, #1F2021);
+    position: relative;
+    overflow: hidden;
+}
+
+.image-banner img {
+    display: none;
+}
+
+.image-banner-overlay {
+    background:
+        radial-gradient(ellipse 70% 100% at 50% 50%, rgba(91, 167, 209, 0.45) 0%, transparent 65%),
+        radial-gradient(ellipse 60% 70% at 50% 0%, rgba(138, 198, 232, 0.32) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 70% at 50% 100%, rgba(91, 167, 209, 0.28) 0%, transparent 60%),
+        radial-gradient(ellipse at 15% 50%, rgba(91, 167, 209, 0.18) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 50%, rgba(91, 167, 209, 0.18) 0%, transparent 50%);
+}
+
+/* Platzhalter-Hinweis-Badge — wird zu jedem Bild gesetzt, das
+   noch ein Platzhalter ist (data-placeholder="true"). */
+[data-placeholder="true"] {
+    position: relative;
+}
+
+[data-placeholder="true"]::after {
+    content: 'PLATZHALTER';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 5;
+    background: rgba(31, 32, 33, 0.85);
+    color: var(--color-steel-blue-light, #8AC6E8);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    pointer-events: none;
+}

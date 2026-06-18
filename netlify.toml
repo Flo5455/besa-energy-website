@@ -1,0 +1,6 @@
+# BESA energy — Landingpage
+# Reines statisches HTML/CSS/JS, kein Build-Schritt nötig.
+# Das Repository-Root ist gleichzeitig das Veröffentlichungs-Verzeichnis.
+[build]
+  publish = "."
+  command = ""

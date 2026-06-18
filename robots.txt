@@ -1,0 +1,38 @@
+# BESA Energy — robots.txt
+# https://besa.energy
+
+User-agent: *
+Allow: /
+
+# Verzeichnis-Listing nicht crawlen (sind nur interne Hilfsdateien)
+Disallow: /scripts/
+Disallow: /*.backup-*
+Disallow: /*.md$
+Disallow: /*.txt$
+Disallow: /*.bat$
+
+# AI-Crawler: ausschließen, solange BESA-Inhalte nicht in LLM-Trainings
+# landen sollen. Felix-Bestätigung steht aus — bei Bedarf einzelne wieder erlauben.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# Sitemap
+Sitemap: https://besa.energy/sitemap.xml

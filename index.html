@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Effiziente Photovoltaik-Anlagen für Ihr Eigenheim. Schlüsselfertige PV-Lösungen in der Region Bitterfeld, Leipzig, Halle und Dessau. Jetzt kostenlos beraten lassen.">
+    <title>BESA energy – Ihre Photovoltaik, mühelos, effizient, nachhaltig</title>
+    <link rel="icon" type="image/svg+xml" href="media/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="media/favicon-32.png">
+    <link rel="apple-touch-icon" href="media/favicon-180.png">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BESA energy – Photovoltaik aus der Region">
+    <meta property="og:description"
+        content="Schlüsselfertige PV-Lösungen in der Region Bitterfeld, Leipzig, Halle und Dessau. 30+ Jahre Erfahrung. Jetzt kostenlos beraten lassen.">
+    <meta property="og:url" content="https://www.besa.energy">
+    <meta property="og:image" content="https://www.besa.energy/media/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Canonical URL (TODO: an finalen Hosting-Pfad anpassen, sobald Felix entschieden hat - z.B. lp.besa.energy oder besa.energy/lp/) -->
+    <link rel="canonical" href="https://www.besa.energy/">
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="media/aerial-solar-farm.jpg" as="image">
+
+    <!-- Lato lokal gehostet (DSGVO-konform) - Preload der wichtigsten Schnitte -->
+    <link rel="preload" href="css/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/fonts/lato-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/styles.css?v=20260615">
+    <link rel="stylesheet" href="css/cookie-banner.css?v=20260615">
+    <!-- Leaflet (Region-Karte) wird erst nach Cookie-Consent (Funktional) nachgeladen - siehe js/main.js -->
+    <!-- EmailJS wird erst beim Absenden des Kontaktformulars nachgeladen - siehe js/main.js -->
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "BESA energy",
+        "description": "Ihr Partner für ganzheitliche Solarstrom-Lösungen in der Region Bitterfeld, Leipzig, Halle und Dessau.",
+        "url": "https://www.besa.energy",
+        "telephone": "+493493510173",
+        "email": "mail@besa.energy",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Neuwerk 5",
+            "addressLocality": "Muldestausee",
+            "postalCode": "06774",
+            "addressCountry": "DE"
+        },
+        "areaServed": ["Leipzig", "Halle", "Dessau", "Bitterfeld", "Muldestausee"],
+        "priceRange": "$$",
+        "openingHours": ["Mo-Th 08:00-15:00", "Fr 08:00-14:00"],
+        "sameAs": []
+    }
+    </script>
+
+    <!-- Schema.org FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Was kostet eine PV-Anlage ungefähr?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Eine schlüsselfertige 6-kWp-Anlage ohne Speicher beginnt bei rund 9.000 €, eine 10-kWp-Anlage mit 10-kWh-Speicher liegt typisch zwischen 18.000 € und 25.000 €. Der Preis hängt von Anlagengröße, Speichergröße, Dachform, Ausrichtung und Zubehör ab. Beim kostenlosen Vor-Ort-Termin gibt es einen verbindlichen Festpreis. Seit 2023 fällt für Anlagen unter 30 kWp keine Mehrwertsteuer mehr an."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Lohnt sich eine PV-Anlage finanziell?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Eine typische 10-kWp-Anlage zahlt sich in 9–12 Jahren ab. Danach produziert sie weitere 15–20 Jahre kostenlos Strom - die Module sind in der Regel auf 25+ Jahre Leistung garantiert. Über die Einspeisevergütung (aktuell 8,03 ct/kWh für Anlagen ≤ 10 kWp) wird vergütet, was nicht selbst verbraucht wird."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Ist mein Dach für eine PV-Anlage geeignet?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Die meisten Dächer sind geeignet - entscheidend sind Ausrichtung, Neigung und Verschattung. Ideal ist Süd mit 30–35°, aber auch Ost-West-Anlagen erreichen rund 90 % des Optimums. Flachdächer funktionieren mit Aufständerung. Auch ältere Dächer mit Asbest oder Eternit prüfen wir vor Ort - oft lohnt sich eine Sanierung im selben Zug."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Welche Förderungen kann ich nutzen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Die wichtigste Vergünstigung gilt automatisch: 0 % Mehrwertsteuer auf Anlagen unter 30 kWp inkl. Speicher. Für die Finanzierung bietet die KfW über das Programm 270 zinsgünstige Kredite. In Sachsen-Anhalt und Sachsen gibt es zeitweise Landesprogramme für Speicher und Energieberatung. Wir prüfen bei jedem Angebot, was passt, und kümmern uns auf Wunsch um die Antragstellung."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Brauche ich einen Stromspeicher?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pflicht ist er nicht - sinnvoll meist schon. Ohne Speicher liegt der Eigenverbrauch typisch bei 25–35 %, mit Speicher bei 60–80 %. Speicher rechnen sich besonders, wenn man tagsüber wenig zu Hause ist, eine Wärmepumpe plant oder Inselbetrieb bei Stromausfall möchte."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wie lange dauert die Installation?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Die reine Montage dauert 1–3 Tage. Vom Erstgespräch bis zur fertigen Anlage vergehen in der Regel 4–8 Wochen - inklusive Planung, Genehmigung und Netzanmeldung. BESA übernimmt den gesamten Papierkram: Anmeldung beim Netzbetreiber, Marktstammdatenregister und ggf. Bauanzeige."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was passiert mit überschüssigem Strom?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Überschüssiger Strom geht automatisch ins öffentliche Netz und wird über die Einspeisevergütung vergütet - aktuell 8,03 ct/kWh für Anlagen ≤ 10 kWp, festgeschrieben für 20 Jahre. Mit einem Batteriespeicher steigt der Eigenverbrauch von typisch 30 % auf 70–80 % - meist der größere finanzielle Hebel."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Welche Garantien gibt es auf Module, Wechselrichter und Speicher?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Module: 25 Jahre Leistungsgarantie (mindestens 80–87 % Nennleistung) und 12–15 Jahre Produktgarantie. Wechselrichter: meist 10 Jahre. Speicher: 10 Jahre. Plus zweijährige Werkstatt-Gewährleistung auf die Montage. Eingesetzt werden bewährte Marken wie SMA, Fronius, BYD."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wie ist die Wartung geregelt?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Eine PV-Anlage ist sehr wartungsarm. Empfohlen wird ein Wartungs-Check alle 4–6 Jahre für Verschmutzung, Verkabelung und Wechselrichter-Daten. Die erste Wartung bei BESA ist gratis, wenn Kauf und Montage über uns laufen."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was, wenn die Anlage durch Sturm, Hagel oder Brand beschädigt wird?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Module sind so gebaut, dass sie Hagelkörnern bis ca. 25 mm Durchmesser standhalten. Wir empfehlen, die Anlage in die Wohngebäudeversicherung aufzunehmen oder eine separate PV-Versicherung abzuschließen (ab ca. 80 €/Jahr). BESA hilft bei der Schadensaufnahme und Dokumentation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was, wenn der Ertrag geringer ausfällt als prognostiziert?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Schwankungen von ±10 % zwischen einzelnen Jahren sind normal. Wenn der Ertrag dauerhaft deutlich unter Prognose liegt, schauen wir uns die Anlage an - meist ist es Verschmutzung, ein Modul-Defekt oder ein Wechselrichter-Problem. Über Garantie oder Wartung abgedeckt."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kann ich die Anlage später erweitern?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, in den meisten Fällen problemlos. Speicher lassen sich nachrüsten, sofern der Wechselrichter dafür ausgelegt ist. Wallboxen integrieren sich reibungslos. Auch eine Modul-Erweiterung ist möglich, wenn Dachplatz und Wechselrichter mitmachen. Wer schon beim Erstkauf E-Auto oder Wärmepumpe plant, sollte das in der Planung berücksichtigen lassen."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="media/logo.svg" alt="BESA energy" class="logo-img">
+            </a>
+            <nav class="nav" id="nav">
+                <a href="index.html" class="active">Start</a>
+                <!-- Leistungen: echte Unterseiten (privat/gewerbe/energieversorger = privat/Gewerbe/Stadtwerke) -->
+                <div class="nav-dropdown">
+                    <a href="#">Leistungen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></a>
+                    <div class="dropdown-menu">
+                        <a href="leistungen/privat.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg> Privatkunden</a>
+                        <a href="leistungen/gewerbe.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg> Gewerbe</a>
+                        <a href="leistungen/energieversorger.html"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                            </svg> Energieversorger</a>
+                    </div>
+                </div>
+                <!-- ===========================================================
+                     PHASE 2 — hier einhängen, sobald Inhalte existieren
+                     (Informationsarchitektur aus Meeting 26.05.2026):
+                       • "Produkte" ▾  → Dropdown in den JTL-Shop
+                         (Solarmodule / Speicher / Wechselrichter / Balkonkraftwerk)
+                       • "Ratgeber" ▾  → Dropdown für Blog- & SEO-Artikel
+                       • "Referenzen"  → eigene Projektbilder-Seite
+                     Aufbau identisch zum Leistungen-Dropdown oben (.nav-dropdown
+                     + .dropdown-menu) — nur Inhalte tauschen.
+                     Regionale SEO-Seiten (Bitterfeld, Leipzig, Halle …) bewusst
+                     NICHT hier, sondern in den Footer (sonst überläuft die Navi).
+                     =========================================================== -->
+                <a href="notstrom.html">Notstrom</a>
+                <a href="#warum-besa-3">Warum BESA energy</a>
+                <a href="karriere.html">Karriere</a>
+                <!-- Entfernt aus der Top-Navi (Meeting-Entscheidung 26.05.):
+                     • Solarrechner → erreichbar über Hero-Scroll-Indikator + eigene Sektion (#solarrechner)
+                     • FAQ          → erreichbar über Footer + Scrollen
+                     • Kontakt      → der "Kostenloses Angebot"-Button ist der Kontakt-Weg -->
+            </nav>
+            <div class="header-ctas">
+                <a href="tel:+493493510173" class="header-phone"><svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" width="16" height="16">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>+49 3493 / 510173</a>
+                <a href="#formular" class="btn btn-primary header-cta">Kostenloses Angebot</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menü öffnen">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-photo-container">
+            <picture>
+                <source media="(max-width: 768px)" srcset="media/hero-mobile.webp">
+                <img src="media/hero-desktop.webp" alt="Photovoltaikanlage auf einem Eigenheim in Mitteldeutschland" class="hero-photo" fetchpriority="high">
+            </picture>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+
+                <div class="hero-badges-row">
+                    <span class="hero-badge hero-badge-highlight">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                        </svg>
+                        0 % MwSt. unter 30 kWp
+                    </span>
+                    <span class="hero-badge hero-badge-gratis">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16">
+                            <path
+                                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
+                            </path>
+                        </svg>
+                        1. Wartung <strong>GRATIS</strong> bei Komplettanlage
+                    </span>
+                </div>
+
+                <h1 class="hero-title">PV-Anlagen für Eigenheime.<br><span class="text-gradient">Persönlich. Regional. Verbindlich.</span></h1>
+                <p class="hero-subtitle">Persönliche Beratung &amp; fachgerechte Montage rund um Bitterfeld, Leipzig, Halle und Dessau.</p>
+                <div class="hero-cta">
+                    <!-- 24.05.: Sekundär-CTA "Zum Shop" entfernt (Felix-Vorgabe A1: LP = primär Lead-Page, Shop bleibt im Header).
+                         Primär-CTA outcome-orientiert formuliert ("Komplettangebot" statt nur "Angebot"). -->
+                    <a href="#formular" class="btn btn-primary btn-large">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20"
+                            height="20">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Kostenloses Komplettangebot anfragen
+                    </a>
+                    <span class="hero-cta-note">Unverbindlich · Antwort in 1–2 Werktagen</span>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-item"><span class="trust-number">200+</span><span class="trust-label">installierte Anlagen</span></div>
+                    <div class="trust-item"><span class="trust-number">30+</span><span class="trust-label">Jahre Erfahrung</span></div>
+                    <div class="trust-item trust-item-google">
+                        <span class="trust-number">4,8</span>
+                        <div class="trust-stars" aria-label="4,8 von 5 Sternen">
+                            <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" class="star star-partial">
+                                <defs><linearGradient id="hero-star-fill"><stop offset="80%" stop-color="#F59E0B"/><stop offset="80%" stop-color="rgba(255,255,255,0.25)"/></linearGradient></defs>
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="url(#hero-star-fill)"/>
+                            </svg>
+                        </div>
+                        <span class="trust-label trust-label-google">
+                            <svg class="google-wordmark" viewBox="0 0 272 92" aria-label="Google" role="img">
+                                <path fill="#EA4335" d="M115.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18C71.25 34.32 81.24 25 93.5 25s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44S80.99 39.2 80.99 47.18c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"/>
+                                <path fill="#FBBC05" d="M163.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18c0-12.85 9.99-22.18 22.25-22.18s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44s-12.51 5.46-12.51 13.44c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"/>
+                                <path fill="#4285F4" d="M209.75 26.34v39.82c0 16.38-9.66 23.07-21.08 23.07-10.75 0-17.22-7.19-19.66-13.07l8.48-3.53c1.51 3.61 5.21 7.87 11.17 7.87 7.31 0 11.84-4.51 11.84-13v-3.19h-.34c-2.18 2.69-6.38 5.04-11.68 5.04-11.09 0-21.25-9.66-21.25-22.09 0-12.52 10.16-22.26 21.25-22.26 5.29 0 9.49 2.35 11.68 4.96h.34v-3.61h9.25zm-8.56 20.92c0-7.81-5.21-13.52-11.84-13.52-6.72 0-12.35 5.71-12.35 13.52 0 7.73 5.63 13.36 12.35 13.36 6.63 0 11.84-5.63 11.84-13.36z"/>
+                                <path fill="#34A853" d="M225 3v65h-9.5V3h9.5z"/>
+                                <path fill="#EA4335" d="M262.02 54.48l7.56 5.04c-2.44 3.61-8.32 9.83-18.48 9.83-12.6 0-22.01-9.74-22.01-22.18 0-13.19 9.49-22.18 20.92-22.18 11.51 0 17.14 9.16 18.98 14.11l1.01 2.52-29.65 12.28c2.27 4.45 5.8 6.72 10.75 6.72 4.96 0 8.4-2.44 10.92-6.14zm-23.27-7.98l19.82-8.23c-1.09-2.77-4.37-4.7-8.23-4.7-4.95 0-11.84 4.37-11.59 12.93z"/>
+                                <path fill="#4285F4" d="M35.29 41.41V32H67c.31 1.64.47 3.58.47 5.68 0 7.06-1.93 15.79-8.15 22.01-6.05 6.3-13.78 9.66-24.02 9.66C16.32 69.35.36 53.89.36 34.91.36 15.93 16.32.47 35.3.47c10.5 0 17.98 4.12 23.6 9.49l-6.64 6.64c-4.03-3.78-9.49-6.72-16.97-6.72-13.86 0-24.7 11.17-24.7 25.03 0 13.86 10.84 25.03 24.7 25.03 8.99 0 14.11-3.61 17.39-6.89 2.66-2.66 4.41-6.46 5.1-11.65l-22.49.01z"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Solarrechner Floating Sticker (umgebaut 31.05.: vorher Blackout-Schutz).
+             Führt zur Solarrechner-Sektion #solarrechner. -->
+        <a href="#solarrechner" class="hero-solar-sticker">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                <line x1="8" y1="6" x2="16" y2="6"></line>
+                <line x1="8" y1="11" x2="10" y2="11"></line>
+                <line x1="14" y1="11" x2="16" y2="11"></line>
+                <line x1="8" y1="15" x2="10" y2="15"></line>
+                <line x1="14" y1="15" x2="16" y2="15"></line>
+                <line x1="8" y1="18" x2="10" y2="18"></line>
+            </svg>
+            <span>Was<br>spare ich?</span>
+        </a>
+        <!-- Scroll Down Indicator → expliziter Solarrechner-Zugang (Meeting 26.05.:
+             Solarrechner aus Top-Navi entfernt, dafür hier oben beschriftet). -->
+        <a href="#solarrechner" class="scroll-indicator" aria-label="Zum Solarrechner scrollen">
+            <span class="scroll-indicator-label">Solarrechner</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </a>
+    </section>
+
+    <!-- Trust-Bar: 4 Differenzierungs-Items gegen Subunternehmer-Vertriebe -->
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-bar-grid">
+                <div class="trust-bar-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32" aria-hidden="true">
+                        <path d="M12 2 L4 6 v6 c0 5 3.4 9.4 8 10 c4.6-.6 8-5 8-10 V6 z"></path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                    <div>
+                        <strong>Fachbetrieb</strong>
+                        <span>Fachgerecht geplant und montiert</span>
+                    </div>
+                </div>
+                <div class="trust-bar-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32" aria-hidden="true">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <div>
+                        <strong>Eigenes Lager</strong>
+                        <span>Selbstabholung nahe Bitterfeld möglich</span>
+                    </div>
+                </div>
+                <div class="trust-bar-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32" aria-hidden="true">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <div>
+                        <strong>Eigene Monteure</strong>
+                        <span>Festangestellte Teams auf Ihrem Dach</span>
+                    </div>
+                </div>
+                <div class="trust-bar-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32" aria-hidden="true">
+                        <path d="M21 11.5 a8.38 8.38 0 0 1 -.9 3.8 8.5 8.5 0 0 1 -7.6 4.7 8.38 8.38 0 0 1 -3.8 -.9 L3 21 l1.9-5.7 a8.38 8.38 0 0 1 -.9 -3.8 8.5 8.5 0 0 1 4.7 -7.6 8.38 8.38 0 0 1 3.8 -.9 h.5 a8.48 8.48 0 0 1 8 8 z"></path>
+                    </svg>
+                    <div>
+                        <strong>Ein Ansprechpartner</strong>
+                        <span>Persönlich, auch nach dem Kauf</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3-Benefits-Block: "Warum BESA energy" (Felix-Direktwunsch 20.05.) -->
+    <!-- Psychologische Hebel: Risk Reversal (kein Subunternehmer) + Authority Bias (30+ Jahre)
+         + Social Proof (Persönlichkeit) + Lokal-Bias (Mitteldeutschland) -->
+    <section class="benefits-3-section section-compact" id="warum-besa-3">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Warum BESA energy</span>
+                <h2>Solar aus einer Hand, persönlich vor Ort</h2>
+                <p class="section-desc">Sechs Gründe, warum Eigenheim-Besitzer in Mitteldeutschland mit uns arbeiten.</p>
+            </div>
+
+            <div class="benefits-3-grid">
+                <!-- Benefit 1: Persönlich -->
+                <article class="benefit-3-item">
+                    <div class="benefit-3-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="32" cy="22" r="9"></circle>
+                            <path d="M14 54 c0-10 8-16 18-16 s18 6 18 16"></path>
+                            <path d="M44 14 l4 4 -4 4"></path>
+                            <path d="M48 18 H38"></path>
+                        </svg>
+                    </div>
+                    <h3>Persönlich, von Mensch zu Mensch</h3>
+                    <p>Sie sprechen mit einem festen Ansprechpartner — von der ersten Beratung bis zur Wartung. Kein Callcenter, keine wechselnden Bearbeiter.</p>
+                </article>
+
+                <!-- Benefit 2: Regional verbindlich -->
+                <article class="benefit-3-item">
+                    <div class="benefit-3-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M32 56 C20 44 14 36 14 26 a18 18 0 0 1 36 0 c0 10 -6 18 -18 30 z"></path>
+                            <circle cx="32" cy="26" r="6"></circle>
+                        </svg>
+                    </div>
+                    <h3>Regional verbindlich aus Mitteldeutschland</h3>
+                    <p>Seit über 30 Jahren nahe Bitterfeld für Eigenheim-Besitzer in Sachsen-Anhalt, Sachsen und Thüringen tätig. Bei Fragen sind wir vor Ort.</p>
+                </article>
+
+                <!-- Benefit 3: Ohne Subunternehmer -->
+                <article class="benefit-3-item">
+                    <div class="benefit-3-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="20" cy="20" r="7"></circle>
+                            <circle cx="44" cy="20" r="7"></circle>
+                            <circle cx="32" cy="42" r="7"></circle>
+                            <path d="M8 56 c0-7 6-12 12-12 s12 5 12 12"></path>
+                            <path d="M32 56 c0-7 6-12 12-12 s12 5 12 12"></path>
+                        </svg>
+                    </div>
+                    <h3>Montage durch eigene Monteure</h3>
+                    <p>Eigenes Team, eigenes Lager, kurze Wege. Die Verantwortung bleibt in einer Hand — von der Planung bis zur Inbetriebnahme.</p>
+                </article>
+
+                <!-- Benefit 4: Festpreis -->
+                <article class="benefit-3-item">
+                    <div class="benefit-3-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M32 6 L12 14 v16 c0 14 9 25 20 28 c11 -3 20 -14 20 -28 V14 z"></path>
+                            <path d="M24 30 l6 6 12 -12"></path>
+                        </svg>
+                    </div>
+                    <h3>Festpreis ohne Aufpreisfalle</h3>
+                    <p>Nach dem kostenlosen Vor-Ort-Termin bekommen Sie ein verbindliches Angebot. Sie zahlen, was darin steht — keine Nachforderungen.</p>
+                </article>
+
+                <!-- Benefit 5: Erfahrung -->
+                <article class="benefit-3-item">
+                    <div class="benefit-3-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="32" cy="22" r="13"></circle>
+                            <path d="M22 33 L18 54 L32 46 L46 54 L42 33"></path>
+                            <path d="M26 22 l4 4 8 -8"></path>
+                        </svg>
+                    </div>
+                    <h3>Aus Erfahrung, nicht aus dem Katalog</h3>
+                    <p>Wir kennen die Produkte vom Dach, nicht aus dem Prospekt — und verbauen nur Technik, die sich in unseren Projekten bewährt hat.</p>
+                </article>
+
+                <!-- Benefit 6: 0% MwSt -->
+                <article class="benefit-3-item">
+                    <div class="benefit-3-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="32" cy="32" r="24"></circle>
+                            <circle cx="24" cy="24" r="3.5"></circle>
+                            <circle cx="40" cy="40" r="3.5"></circle>
+                            <path d="M42 22 L22 42"></path>
+                        </svg>
+                    </div>
+                    <h3>0 % MwSt. — staatlich begünstigt</h3>
+                    <p>Auf Anlagen unter 30 kWp entfällt die Mehrwertsteuer. Den Papierkram dazu übernehmen wir.</p>
+                </article>
+            </div>
+
+            <div class="benefits-3-cta">
+                <a href="#formular" class="btn btn-primary">Kostenlos beraten lassen</a>
+                <span class="benefits-3-cta-note">Unverbindlich · Vor-Ort-Termin in 1–2 Werktagen</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produkt-Selector "Was suchen Sie?"
+         Eingebaut 24.05.2026 — 1KOMMA5°-Inspiration
+         Psychologische Hebel:
+         - Jobs to be Done (User wählt seinen Pfad)
+         - Reduce Cognitive Load +13 (klare Entscheidungs-Architektur)
+         - Choice Architecture (4 Optionen statt undefiniertem CTA-Salat) -->
+    <section class="path-selector-section section-compact" id="ihr-einstieg">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Ihr Einstieg</span>
+                <h2>Wie können wir Ihnen helfen?</h2>
+                <p class="section-desc">Wählen Sie, was am besten passt — wir leiten Sie direkt weiter.</p>
+            </div>
+
+            <div class="path-selector-grid">
+                <a href="#formular" class="path-card path-card-primary">
+                    <div class="path-card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 14 L16 4 L28 14 V26 a2 2 0 0 1 -2 2 H6 a2 2 0 0 1 -2 -2 z"/>
+                            <path d="M16 28 V18 H12 V28"/>
+                            <path d="M22 9 V4 H18"/>
+                            <circle cx="24" cy="20" r="3" fill="currentColor"/>
+                            <path d="M24 14 V17 M24 23 V26 M18 20 H21 M27 20 H30" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="path-card-body">
+                        <h3>Komplette PV-Anlage</h3>
+                        <p>Schlüsselfertige Anlage geplant, geliefert und montiert. Persönliches Angebot nach Vor-Ort-Termin.</p>
+                    </div>
+                    <span class="path-card-arrow" aria-hidden="true">→</span>
+                </a>
+
+                <a href="#solarrechner" class="path-card">
+                    <div class="path-card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="6" y="3" width="20" height="26" rx="2"/>
+                            <rect x="10" y="7" width="12" height="6"/>
+                            <circle cx="11" cy="18" r="1.5" fill="currentColor"/>
+                            <circle cx="16" cy="18" r="1.5" fill="currentColor"/>
+                            <circle cx="21" cy="18" r="1.5" fill="currentColor"/>
+                            <circle cx="11" cy="23" r="1.5" fill="currentColor"/>
+                            <circle cx="16" cy="23" r="1.5" fill="currentColor"/>
+                            <circle cx="21" cy="23" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="path-card-body">
+                        <h3>Anlagengröße berechnen</h3>
+                        <p>In wenigen Klicks: passende Anlagengröße, Jahresertrag und Investitionsspanne.</p>
+                    </div>
+                    <span class="path-card-arrow" aria-hidden="true">→</span>
+                </a>
+
+                <a href="https://besa.energy/shop" class="path-card" target="_blank" rel="noopener noreferrer">
+                    <div class="path-card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 7 H8 L11 22 a2 2 0 0 0 2 1.6 h12 a2 2 0 0 0 2 -1.6 L31 10 H8"/>
+                            <circle cx="13" cy="28" r="1.5"/>
+                            <circle cx="25" cy="28" r="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="path-card-body">
+                        <h3>Einzelne Komponenten</h3>
+                        <p>Module, Wechselrichter, Speicher und Zubehör. Selbstabholung nahe Bitterfeld möglich.</p>
+                    </div>
+                    <span class="path-card-arrow" aria-hidden="true">→</span>
+                </a>
+
+                <a href="tel:+4934935101730" class="path-card">
+                    <div class="path-card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M28 22 v4 a2 2 0 0 1 -2.2 2 c-3.9 -.4 -7.6 -1.8 -10.8 -4 c-3 -2 -5.5 -4.6 -7.4 -7.6 c-2.2 -3.2 -3.5 -7 -4 -10.8 a2 2 0 0 1 2 -2.2 H10 a2 2 0 0 1 2 1.6 c.3 2 .8 4 1.6 5.8 a2 2 0 0 1 -.5 2.2 L11 16 a16 16 0 0 0 7 7 l2.4 -2 a2 2 0 0 1 2.2 -.5 c1.8 .8 3.8 1.3 5.8 1.6 a2 2 0 0 1 1.6 2 z"/>
+                        </svg>
+                    </div>
+                    <div class="path-card-body">
+                        <h3>Erst persönlich sprechen</h3>
+                        <p>Direkter Draht zu unserem Team — Mo–Fr 8–15 Uhr (Mittagspause 12–13 Uhr).</p>
+                    </div>
+                    <span class="path-card-arrow" aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solarrechner -->
+    <section class="solar-calc-section" id="solarrechner">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Solarrechner</span>
+                <h2>Welche PV-Anlage passt auf Ihr Dach?</h2>
+                <p class="section-desc">In wenigen Klicks: passende Anlagengröße, Jahresertrag und mögliche Ersparnis.</p>
+            </div>
+            <div class="solar-calc-wrapper">
+                <div class="solar-calc-progress">
+                    <div class="progress-step active" data-step="1">
+                        <div class="progress-step-number">1</div>Dachtyp
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <div class="progress-step-number">2</div>Ausrichtung
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="progress-step-number">3</div>Haushalt
+                    </div>
+                    <div class="progress-step" data-step="4">
+                        <div class="progress-step-number">4</div>Verbrauch
+                    </div>
+                    <div class="progress-step" data-step="5">
+                        <div class="progress-step-number">5</div>Speicher
+                    </div>
+                    <div class="progress-step" data-step="6">
+                        <div class="progress-step-number">✓</div>Ergebnis
+                    </div>
+                </div>
+                <div class="solar-calc-body">
+                    <!-- Step 1: Dachtyp -->
+                    <div class="calc-step active" data-step="1">
+                        <h3>Welchen Dachtyp hat Ihr Haus?</h3>
+                        <p class="calc-step-desc">Wählen Sie den Dachtyp aus, der am besten zu Ihrem Haus passt.</p>
+                        <div class="tile-grid" data-field="dachtyp">
+                            <div class="tile" data-value="Satteldach">
+                                <button class="tile-info" type="button" aria-label="Erklärung zu Satteldach"
+                                    data-tooltip-title="Satteldach"
+                                    data-tooltip-text="Das klassische Dach mit zwei schrägen Flächen und einem First. Häufigster Typ bei Einfamilienhäusern. Beide Seiten lassen sich für Solar nutzen - Süd-Ausrichtung optimal, Ost-West nahezu gleichwertig.">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><circle cx="12" cy="12" r="10"/><line x1="12" y1="11" x2="12" y2="16"/><circle cx="12" cy="8" r="0.5" fill="currentColor"/></svg>
+                                </button>
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <path d="M8 35L32 12L56 35" />
+                                        <rect x="12" y="35" width="40" height="20" />
+                                        <rect x="25" y="40" width="14" height="15" />
+                                    </svg></div>
+                                <span class="tile-label">Satteldach</span>
+                            </div>
+                            <div class="tile" data-value="Flachdach">
+                                <button class="tile-info" type="button" aria-label="Erklärung zu Flachdach"
+                                    data-tooltip-title="Flachdach"
+                                    data-tooltip-text="Dach ohne nennenswerte Neigung (bis ca. 10°). Solarmodule werden auf einer Aufständerung mit optimaler Neigung montiert. Sehr gut für Solar - die Ausrichtung der Module ist frei wählbar.">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><circle cx="12" cy="12" r="10"/><line x1="12" y1="11" x2="12" y2="16"/><circle cx="12" cy="8" r="0.5" fill="currentColor"/></svg>
+                                </button>
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <rect x="8" y="20" width="48" height="5" />
+                                        <rect x="12" y="25" width="40" height="25" />
+                                        <rect x="25" y="35" width="14" height="15" />
+                                    </svg></div>
+                                <span class="tile-label">Flachdach</span>
+                            </div>
+                            <div class="tile" data-value="Pultdach">
+                                <button class="tile-info" type="button" aria-label="Erklärung zu Pultdach"
+                                    data-tooltip-title="Pultdach"
+                                    data-tooltip-text="Einseitig geneigte Dachfläche - eine schräge Seite, kein First. Häufig bei modernen Häusern, Anbauten oder Garagen. Solar-Ertrag hängt stark von der Ausrichtung der schrägen Seite ab.">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><circle cx="12" cy="12" r="10"/><line x1="12" y1="11" x2="12" y2="16"/><circle cx="12" cy="8" r="0.5" fill="currentColor"/></svg>
+                                </button>
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <path d="M8 38L56 20V38" />
+                                        <rect x="12" y="38" width="40" height="16" />
+                                        <rect x="25" y="40" width="14" height="14" />
+                                    </svg></div>
+                                <span class="tile-label">Pultdach</span>
+                            </div>
+                            <div class="tile" data-value="Walmdach">
+                                <button class="tile-info" type="button" aria-label="Erklärung zu Walmdach"
+                                    data-tooltip-title="Walmdach"
+                                    data-tooltip-text="Dach mit vier geneigten Flächen, an allen Seiten abgewalmt - keine Giebel. Klassisch bei älteren Häusern. Weniger Modulfläche pro Seite als beim Satteldach, dafür mehr Ausrichtungs-Optionen.">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><circle cx="12" cy="12" r="10"/><line x1="12" y1="11" x2="12" y2="16"/><circle cx="12" cy="8" r="0.5" fill="currentColor"/></svg>
+                                </button>
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <path d="M8 35L20 18H44L56 35" />
+                                        <rect x="12" y="35" width="40" height="20" />
+                                        <rect x="25" y="40" width="14" height="15" />
+                                    </svg></div>
+                                <span class="tile-label">Walmdach</span>
+                            </div>
+                        </div>
+                        <div class="tile-grid-tooltip" hidden>
+                            <div class="tile-grid-tooltip-header">
+                                <strong class="tile-grid-tooltip-title"></strong>
+                                <button class="tile-grid-tooltip-close" type="button" aria-label="Schließen">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+                                </button>
+                            </div>
+                            <p class="tile-grid-tooltip-text"></p>
+                        </div>
+                        <div class="calc-nav">
+                            <div></div><button class="btn btn-steel calc-next" disabled>Weiter</button>
+                        </div>
+                    </div>
+                    <!-- Step 2: Ausrichtung -->
+                    <div class="calc-step" data-step="2">
+                        <h3>Wie ist Ihr Dach ausgerichtet?</h3>
+                        <p class="calc-step-desc">Die Dachausrichtung beeinflusst den Solarertrag Ihrer Anlage.</p>
+                        <div class="tile-grid five-col" data-field="ausrichtung">
+                            <div class="tile" data-value="Süd">
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <circle cx="32" cy="32" r="10" />
+                                        <line x1="32" y1="8" x2="32" y2="14" />
+                                        <line x1="32" y1="50" x2="32" y2="56" />
+                                        <line x1="8" y1="32" x2="14" y2="32" />
+                                        <line x1="50" y1="32" x2="56" y2="32" />
+                                    </svg></div><span class="tile-label">Süd</span><span
+                                    class="tile-sublabel">Optimal</span>
+                            </div>
+                            <div class="tile" data-value="Ost-West">
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <path d="M8 32h48M20 20l-12 12 12 12M44 20l12 12-12 12" />
+                                    </svg></div><span class="tile-label">Ost-West</span><span class="tile-sublabel">Sehr
+                                    gut</span>
+                            </div>
+                            <div class="tile" data-value="Ost">
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <circle cx="32" cy="32" r="8" />
+                                        <path d="M44 32h14M40 22l8 10-8 10" />
+                                    </svg></div><span class="tile-label">Ost</span><span
+                                    class="tile-sublabel">Gut</span>
+                            </div>
+                            <div class="tile" data-value="West">
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <circle cx="32" cy="32" r="8" />
+                                        <path d="M20 32H6M24 22l-8 10 8 10" />
+                                    </svg></div><span class="tile-label">West</span><span
+                                    class="tile-sublabel">Gut</span>
+                            </div>
+                            <div class="tile" data-value="Nord">
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <circle cx="32" cy="32" r="18" />
+                                        <line x1="32" y1="14" x2="32" y2="6" />
+                                        <line x1="32" y1="50" x2="32" y2="58" />
+                                        <line x1="14" y1="32" x2="6" y2="32" />
+                                        <line x1="50" y1="32" x2="58" y2="32" />
+                                        <text x="32" y="36" text-anchor="middle" font-size="12" fill="currentColor"
+                                            stroke="none" font-weight="bold">N</text>
+                                    </svg></div><span class="tile-label">Nord</span><span
+                                    class="tile-sublabel">Eingeschränkt</span>
+                            </div>
+                        </div>
+                        <div class="calc-nav"><button class="btn btn-back calc-prev">Zurück</button><button
+                                class="btn btn-steel calc-next" disabled>Weiter</button></div>
+                    </div>
+                    <!-- Step 3: Personen -->
+                    <div class="calc-step" data-step="3">
+                        <h3>Wie viele Personen leben in Ihrem Haushalt?</h3>
+                        <p class="calc-step-desc">Der Strombedarf hängt von der Anzahl der Bewohner ab.</p>
+                        <div class="tile-grid three-col" data-field="personen">
+                            <div class="tile" data-value="1-2">
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <circle cx="24" cy="20" r="8" />
+                                        <path d="M8 52v-4a16 16 0 0 1 32 0v4" />
+                                    </svg></div><span class="tile-label">1–2 Personen</span>
+                            </div>
+                            <div class="tile" data-value="3-4">
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <circle cx="20" cy="20" r="7" />
+                                        <circle cx="44" cy="20" r="7" />
+                                        <path d="M4 52v-4a14 14 0 0 1 28 0v4M36 52v-4a14 14 0 0 1 24 0v4" />
+                                    </svg></div><span class="tile-label">3–4 Personen</span>
+                            </div>
+                            <div class="tile" data-value="5+">
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <circle cx="16" cy="18" r="6" />
+                                        <circle cx="32" cy="14" r="6" />
+                                        <circle cx="48" cy="18" r="6" />
+                                        <path
+                                            d="M2 50v-3a12 12 0 0 1 24 0v3M20 50v-3a12 12 0 0 1 24 0v3M38 50v-3a12 12 0 0 1 24 0v3" />
+                                    </svg></div><span class="tile-label">5+ Personen</span>
+                            </div>
+                        </div>
+                        <div class="calc-nav"><button class="btn btn-back calc-prev">Zurück</button><button
+                                class="btn btn-steel calc-next" disabled>Weiter</button></div>
+                    </div>
+                    <!-- Step 4: Verbrauch -->
+                    <div class="calc-step" data-step="4">
+                        <h3>Wie hoch ist Ihr jährlicher Stromverbrauch?</h3>
+                        <p class="calc-step-desc">Falls Sie es nicht genau wissen, schätzen Sie anhand der Personenzahl.
+                        </p>
+                        <div class="tile-grid three-col" data-field="verbrauch">
+                            <div class="tile" data-value="<3000">
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <path d="M32 8v48M24 16l8-8 8 8" />
+                                    </svg></div><span class="tile-label">
+                                    < 3.000 kWh</span><span class="tile-sublabel">Sparsam</span>
+                            </div>
+                            <div class="tile" data-value="3000-5000">
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <path d="M12 32h40M8 24h48M8 40h48" />
+                                    </svg></div><span class="tile-label">3.000–5.000 kWh</span><span
+                                    class="tile-sublabel">Durchschnitt</span>
+                            </div>
+                            <div class="tile" data-value=">5000">
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <path d="M32 8v48M24 48l8 8 8-8M16 20l8 8M48 20l-8 8" />
+                                    </svg></div><span class="tile-label">> 5.000 kWh</span><span
+                                    class="tile-sublabel">Vielverbraucher</span>
+                            </div>
+                        </div>
+                        <div class="calc-nav"><button class="btn btn-back calc-prev">Zurück</button><button
+                                class="btn btn-steel calc-next" disabled>Weiter</button></div>
+                    </div>
+                    <!-- Step 5: Speicher -->
+                    <div class="calc-step" data-step="5">
+                        <h3>Haben Sie Interesse an einem Stromspeicher?</h3>
+                        <p class="calc-step-desc">Ein Speicher erhöht Ihren Eigenverbrauch und macht Sie unabhängiger.
+                        </p>
+                        <div class="tile-grid three-col" data-field="speicher">
+                            <div class="tile" data-value="Ja">
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <rect x="14" y="16" width="30" height="32" rx="4" />
+                                        <line x1="36" y1="8" x2="36" y2="16" />
+                                        <line x1="22" y1="8" x2="22" y2="16" />
+                                        <rect x="20" y="26" width="18" height="6" rx="1" fill="currentColor"
+                                            opacity="0.3" />
+                                        <rect x="20" y="36" width="12" height="6" rx="1" fill="currentColor"
+                                            opacity="0.3" />
+                                    </svg></div><span class="tile-label">Ja, mit Speicher</span>
+                            </div>
+                            <div class="tile" data-value="Nein">
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <rect x="14" y="16" width="30" height="32" rx="4" />
+                                        <line x1="24" y1="28" x2="34" y2="38" />
+                                        <line x1="34" y1="28" x2="24" y2="38" />
+                                    </svg></div><span class="tile-label">Nein, ohne Speicher</span>
+                            </div>
+                            <div class="tile" data-value="Unsicher">
+                                <div class="tile-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <circle cx="32" cy="32" r="18" />
+                                        <path d="M26 26a6 6 0 0 1 12 2c0 4-6 5-6 5" />
+                                        <circle cx="32" cy="44" r="1.5" fill="currentColor" />
+                                    </svg></div><span class="tile-label">Bin mir unsicher</span>
+                            </div>
+                        </div>
+                        <div class="calc-nav"><button class="btn btn-back calc-prev">Zurück</button><button
+                                class="btn btn-steel calc-next" disabled>Ergebnis anzeigen</button></div>
+                    </div>
+                    <!-- Step 6: Ergebnis -->
+                    <div class="calc-step" data-step="6">
+                        <div class="calc-result">
+                            <div class="result-card">
+                                <h3>Ihre Empfehlung steht.</h3>
+                                <div class="result-stats">
+                                    <div class="result-stat"><span class="result-stat-value"
+                                            id="result-kwp">–</span><span class="result-stat-label">Empfohlene
+                                            Anlagengröße</span></div>
+                                    <div class="result-stat"><span class="result-stat-value"
+                                            id="result-ertrag">–</span><span class="result-stat-label">Geschätzter
+                                            Jahresertrag</span></div>
+                                    <div class="result-stat"><span class="result-stat-value"
+                                            id="result-co2">–</span><span class="result-stat-label">CO₂-Einsparung /
+                                            Jahr</span></div>
+                                </div>
+                                <div class="result-savings">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span id="result-savings-text">Geschätzte Ersparnis: bis zu – €/Jahr</span>
+                                </div>
+                            </div>
+                            <p class="result-cta-text">Sie haben die Eckdaten - wir machen daraus ein <strong>konkretes Angebot</strong>. Innerhalb von 1–2 Werktagen, ohne Verpflichtung.</p>
+                            <button class="btn btn-primary btn-large btn-full" id="result-to-form">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20"
+                                    height="20">
+                                    <path d="M22 2L11 13"></path>
+                                    <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                                </svg>
+                                Kostenloses Angebot anfragen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Möglichkeiten / Sortiment-Slidebar (Florian-Wunsch 24.05.)
+         Inspiration: Kaminbau Leipzig "Ihre Möglichkeiten" — große Background-Image-Karten
+         Dunkle Section, Header mit rotem Border-Rahmen, Slider mit Pfeilen + Scroll-Snap
+         Bilder: Platzhalter (Mix aus bestehenden BESA-/iStock-Bildern), echte Bilder
+         pro Kategorie noch zu liefern (Florian-TODO oder via besa.energy crawl) -->
+    <section class="possibilities-section" id="moeglichkeiten">
+        <div class="container">
+            <div class="possibilities-header">
+                <h2 class="possibilities-title">Ihre Möglichkeiten</h2>
+                <p class="possibilities-subtitle">Vom kompletten Solarpaket bis zum einzelnen Modul — direkt zum Shop.</p>
+            </div>
+        </div>
+        <div class="possibilities-slider-wrapper">
+            <button class="possibilities-arrow possibilities-arrow-prev" type="button" aria-label="Vorherige Kategorie" data-direction="prev">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <div class="possibilities-slider" id="possibilities-slider" role="list">
+                <a href="https://besa.energy/shop/Solarpakete" class="possibility-card" role="listitem" target="_blank" rel="noopener noreferrer" style="background-image: url('media/hero-desktop.webp');">
+                    <div class="possibility-overlay"></div>
+                    <span class="possibility-name">Solarpakete</span>
+                </a>
+                <a href="https://besa.energy/shop/photovoltaikmodule" class="possibility-card" role="listitem" target="_blank" rel="noopener noreferrer" style="background-image: url('media/iStock-1372303728.jpg');">
+                    <div class="possibility-overlay"></div>
+                    <span class="possibility-name">PV Module</span>
+                </a>
+                <a href="https://besa.energy/shop/wechselrichter" class="possibility-card" role="listitem" target="_blank" rel="noopener noreferrer" style="background-image: url('media/iStock-1421667040.jpg');">
+                    <div class="possibility-overlay"></div>
+                    <span class="possibility-name">Wechselrichter</span>
+                </a>
+                <a href="https://besa.energy/shop/Batteriespeicher" class="possibility-card" role="listitem" target="_blank" rel="noopener noreferrer" style="background-image: url('media/iStock-1433753318.jpg');">
+                    <div class="possibility-overlay"></div>
+                    <span class="possibility-name">Stromspeicher</span>
+                </a>
+                <a href="https://besa.energy/shop/wallbox" class="possibility-card" role="listitem" target="_blank" rel="noopener noreferrer" style="background-image: url('media/iStock-1440856714.jpg');">
+                    <div class="possibility-overlay"></div>
+                    <span class="possibility-name">Wallbox</span>
+                </a>
+                <a href="https://besa.energy/shop/balkonkraftwerke" class="possibility-card" role="listitem" target="_blank" rel="noopener noreferrer" style="background-image: url('media/iStock-1127159212.jpg');">
+                    <div class="possibility-overlay"></div>
+                    <span class="possibility-name">Balkonkraftwerke</span>
+                </a>
+                <a href="https://besa.energy/shop/Solarcarports" class="possibility-card" role="listitem" target="_blank" rel="noopener noreferrer" style="background-image: url('media/besa-anlage-carport-echt.webp');">
+                    <div class="possibility-overlay"></div>
+                    <span class="possibility-name">Solarcarports</span>
+                </a>
+                <a href="https://besa.energy/shop/montagesets-solarmodule-dach" class="possibility-card" role="listitem" target="_blank" rel="noopener noreferrer" style="background-image: url('media/iStock-1392289370.jpg');">
+                    <div class="possibility-overlay"></div>
+                    <span class="possibility-name">Unterkonstruktion</span>
+                </a>
+                <a href="https://besa.energy/shop/zubehoer" class="possibility-card" role="listitem" target="_blank" rel="noopener noreferrer" style="background-image: url('media/iStock-1461182195.jpg');">
+                    <div class="possibility-overlay"></div>
+                    <span class="possibility-name">Zubehör</span>
+                </a>
+            </div>
+            <button class="possibilities-arrow possibilities-arrow-next" type="button" aria-label="Nächste Kategorie" data-direction="next">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+
+    <!-- Über uns / Team-Slider (Platzhalter - echte Inhalte folgen mit Franz/Felix/Team) -->
+    <section class="team-section section-compact" id="ueber-uns">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Wer hier auf Ihr Dach kommt</span>
+                <h2>Familienbetrieb in zweiter Generation.</h2>
+                <p class="section-desc">Aus Mitteldeutschland. Persönlich erreichbar.</p>
+            </div>
+
+            <div class="team-slider" data-placeholder="true" tabindex="0" aria-roledescription="Karussell" aria-label="Menschen hinter BESA energy">
+                <button class="team-slider-arrow team-slider-prev" type="button" aria-label="Vorherige Person">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+                <div class="team-slider-viewport">
+                    <div class="team-slider-track" id="team-slider-track">
+
+                        <!-- Slide 1: Franz (Inhaber, 2. Generation) -->
+                        <article class="team-slide" data-person="franz" aria-roledescription="Folie" aria-label="1 von 3: Franz">
+                            <div class="team-slide-photo team-slide-photo-placeholder">
+                                <span class="placeholder-initials" aria-hidden="true">F</span>
+                                <span class="placeholder-label">Foto Franz</span>
+                            </div>
+                            <div class="team-slide-content">
+                                <span class="team-slide-eyebrow">Inhaber</span>
+                                <blockquote class="team-slide-quote">
+                                    „Mein Vater hat BESA aufgebaut. Ich führe es weiter - und stehe heute selbst noch im Lager, wenn's drauf ankommt."
+                                </blockquote>
+                                <footer class="team-slide-author">
+                                    <strong>Franz</strong>
+                                    <span>Inhaber · BESA in zweiter Generation</span>
+                                </footer>
+                            </div>
+                        </article>
+
+                        <!-- Slide 2: Felix (Ansprechpartner) -->
+                        <article class="team-slide" data-person="felix" aria-roledescription="Folie" aria-label="2 von 3: Felix">
+                            <div class="team-slide-photo team-slide-photo-placeholder">
+                                <span class="placeholder-initials" aria-hidden="true">FE</span>
+                                <span class="placeholder-label">Foto Felix</span>
+                            </div>
+                            <div class="team-slide-content">
+                                <span class="team-slide-eyebrow">Ihr Ansprechpartner</span>
+                                <blockquote class="team-slide-quote">
+                                    „Wenn Sie anrufen, lande ich am Telefon. Wenn Sie ein Angebot wollen, schreibe ich es. Kein Callcenter, kein Vertriebssystem."
+                                </blockquote>
+                                <footer class="team-slide-author">
+                                    <strong>Felix</strong>
+                                    <span>Beratung &amp; Verkauf · Ihr Ansprechpartner</span>
+                                </footer>
+                            </div>
+                        </article>
+
+                        <!-- Slide 3: Montage-Team -->
+                        <article class="team-slide" data-person="team" aria-roledescription="Folie" aria-label="3 von 3: Montage-Team">
+                            <div class="team-slide-photo team-slide-photo-placeholder">
+                                <span class="placeholder-initials" aria-hidden="true">T</span>
+                                <span class="placeholder-label">Foto Montage-Team</span>
+                            </div>
+                            <div class="team-slide-content">
+                                <span class="team-slide-eyebrow">Montage-Team</span>
+                                <blockquote class="team-slide-quote">
+                                    „Wir kennen die Anlagen, die wir montieren — dieselben Hände am Dach wie im Lager, vom ersten Handgriff bis zur Übergabe."
+                                </blockquote>
+                                <footer class="team-slide-author">
+                                    <strong>Das Montage-Team</strong>
+                                    <span>Eigene Monteure · Lager Muldestausee</span>
+                                </footer>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <button class="team-slider-arrow team-slider-next" type="button" aria-label="Nächste Person">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+
+                <div class="team-slider-dots" role="tablist" aria-label="Folie auswählen">
+                    <button class="team-slider-dot active" type="button" data-slide="0" role="tab" aria-label="Folie 1: Franz" aria-selected="true"></button>
+                    <button class="team-slider-dot" type="button" data-slide="1" role="tab" aria-label="Folie 2: Felix" aria-selected="false"></button>
+                    <button class="team-slider-dot" type="button" data-slide="2" role="tab" aria-label="Folie 3: Team" aria-selected="false"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof: Bewertungen + Testimonials + Region-Map (Platzhalter - echte Inhalte folgen) -->
+    <section class="social-proof-section section-compact" id="kunden-stimmen">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Kundenstimmen</span>
+                <h2>Echte Erfahrungen von Eigenheimbesitzern aus der Region</h2>
+            </div>
+
+            <!-- Bewertungs-Summary mit Google-Logo -->
+            <a class="rating-summary" href="https://share.google/tBDFant6vziu8N0ZE" target="_blank" rel="noopener noreferrer" aria-label="Bewertungen auf Google ansehen">
+                <svg class="google-logo" viewBox="0 0 24 24" aria-label="Google" width="22" height="22">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                <div class="rating-stars" aria-label="4,8 von 5 Sternen">
+                    <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24" class="star star-partial">
+                        <defs><linearGradient id="star-fill"><stop offset="80%" stop-color="#F59E0B"/><stop offset="80%" stop-color="#E5E7EB"/></linearGradient></defs>
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="url(#star-fill)"/>
+                    </svg>
+                </div>
+                <span class="rating-score">4,8</span>
+                <span class="rating-max">/ 5</span>
+                <span class="rating-source">auf Google</span>
+            </a>
+
+            <!-- Testimonials-Slider - 5 echte Google-Bewertungen.
+                 Quelle: https://share.google/tBDFant6vziu8N0ZE
+                 Texte gekürzt/von Tippfehlern befreit, Sinn unverändert.
+                 Karten klickbar → Google-Bewertungen. -->
+            <div class="testimonials-slider" tabindex="0" aria-roledescription="Karussell" aria-label="Google-Bewertungen für BESA energy">
+                <button class="testimonials-slider-arrow testimonials-slider-prev" type="button" aria-label="Vorherige Bewertung">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+                <div class="testimonials-slider-viewport">
+                    <div class="testimonials-slider-track" id="testimonials-slider-track">
+
+                        <!-- 1: LuCo M. (Local Guide, NEU) -->
+                        <article class="testimonial-card">
+                            <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <blockquote class="testimonial-quote">„Ich habe bei BESA energy eine 14,25 kWp PV-Anlage inklusive Unterkonstruktion, Kabelbindern, Solarkabeln und Steckern bestellt und selbst abgeholt - alles war perfekt vorbereitet. Die Beratung war hochkompetent, die Erreichbarkeit per Telefon herausragend. […] Endlich mal ein Shop, wo die Ware auch wirklich verfügbar ist."</blockquote>
+                            <footer class="testimonial-author">
+                                <div class="testimonial-avatar" aria-hidden="true">L</div>
+                                <div class="testimonial-author-info">
+                                    <a class="testimonial-author-link" href="https://share.google/tBDFant6vziu8N0ZE" target="_blank" rel="noopener noreferrer">LuCo M.</a>
+                                    <span>vor 3 Wochen</span>
+                                    <span class="testimonial-system">14,25 kWp · Selbstabholung am Lager</span>
+                                </div>
+                            </footer>
+                            <a class="testimonial-source" href="https://share.google/tBDFant6vziu8N0ZE" target="_blank" rel="noopener noreferrer">aus Google-Bewertung<svg class="testimonial-source-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline></svg></a>
+                        </article>
+
+                        <!-- 2: Martin H. (NEU) -->
+                        <article class="testimonial-card">
+                            <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <blockquote class="testimonial-quote">„Die Firma BESA energy GmbH kann ich uneingeschränkt empfehlen. Sehr einfacher Bestellprozess, freundliche und entgegenkommende telefonische Terminabstimmung sowie hilfsbereites Lagerpersonal. Fetter Daumen nach oben - weiter so!"</blockquote>
+                            <footer class="testimonial-author">
+                                <div class="testimonial-avatar" aria-hidden="true">M</div>
+                                <div class="testimonial-author-info">
+                                    <a class="testimonial-author-link" href="https://share.google/tBDFant6vziu8N0ZE" target="_blank" rel="noopener noreferrer">Martin H.</a>
+                                    <span>vor einer Woche</span>
+                                    <span class="testimonial-system">Bestellung &amp; Selbstabholung</span>
+                                </div>
+                            </footer>
+                            <a class="testimonial-source" href="https://share.google/tBDFant6vziu8N0ZE" target="_blank" rel="noopener noreferrer">aus Google-Bewertung<svg class="testimonial-source-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline></svg></a>
+                        </article>
+
+                        <!-- 3: Alex A. (Tippfehler korrigiert) -->
+                        <article class="testimonial-card">
+                            <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <blockquote class="testimonial-quote">„Es wurde zuerst nur ein Growatt-Wechselrichter bestellt, später noch ein zweiter - ich habe aber beide dringend gebraucht. Durch den tollen Support von BESA energy wurde alles in kürzester Zeit organisiert. Die Kommunikation und Hilfsbereitschaft waren tadellos. Ich würde hier wieder bestellen!"</blockquote>
+                            <footer class="testimonial-author">
+                                <div class="testimonial-avatar" aria-hidden="true">A</div>
+                                <div class="testimonial-author-info">
+                                    <a class="testimonial-author-link" href="https://share.google/tBDFant6vziu8N0ZE" target="_blank" rel="noopener noreferrer">Alex A.</a>
+                                    <span>vor 10 Monaten</span>
+                                    <span class="testimonial-system">Growatt-Wechselrichter</span>
+                                </div>
+                            </footer>
+                            <a class="testimonial-source" href="https://share.google/tBDFant6vziu8N0ZE" target="_blank" rel="noopener noreferrer">aus Google-Bewertung<svg class="testimonial-source-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline></svg></a>
+                        </article>
+
+                        <!-- 4: Axel L. -->
+                        <article class="testimonial-card">
+                            <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <blockquote class="testimonial-quote">„Sehr kompetent, sehr schnell - hat alles auch bei der Erweiterung wie versprochen super geklappt. Sehr netter Kontakt auch in der Assistenz, immer erreichbar. Uneingeschränkt weiterzuempfehlen!"</blockquote>
+                            <footer class="testimonial-author">
+                                <div class="testimonial-avatar" aria-hidden="true">A</div>
+                                <div class="testimonial-author-info">
+                                    <a class="testimonial-author-link" href="https://share.google/tBDFant6vziu8N0ZE" target="_blank" rel="noopener noreferrer">Axel L.</a>
+                                    <span>vor einem Jahr</span>
+                                    <span class="testimonial-system">Anlagen-Erweiterung</span>
+                                </div>
+                            </footer>
+                            <a class="testimonial-source" href="https://share.google/tBDFant6vziu8N0ZE" target="_blank" rel="noopener noreferrer">aus Google-Bewertung<svg class="testimonial-source-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline></svg></a>
+                        </article>
+
+                        <!-- 5: Sascha G. -->
+                        <article class="testimonial-card">
+                            <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <blockquote class="testimonial-quote">„Schnelle, kompetente und lösungsorientierte Abwicklung der gestellten Aufgabe. Unser Problem wurde zur vollsten Zufriedenheit gelöst."</blockquote>
+                            <footer class="testimonial-author">
+                                <div class="testimonial-avatar" aria-hidden="true">S</div>
+                                <div class="testimonial-author-info">
+                                    <a class="testimonial-author-link" href="https://share.google/tBDFant6vziu8N0ZE" target="_blank" rel="noopener noreferrer">Sascha G.</a>
+                                    <span>vor 4 Monaten</span>
+                                </div>
+                            </footer>
+                            <a class="testimonial-source" href="https://share.google/tBDFant6vziu8N0ZE" target="_blank" rel="noopener noreferrer">aus Google-Bewertung<svg class="testimonial-source-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline></svg></a>
+                        </article>
+
+                    </div>
+                </div>
+
+                <button class="testimonials-slider-arrow testimonials-slider-next" type="button" aria-label="Nächste Bewertung">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+
+                <div class="testimonials-slider-dots" id="testimonials-slider-dots" role="tablist" aria-label="Bewertung auswählen">
+                    <!-- Dots werden via JS erzeugt (Anzahl je nach Viewport) -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Region-Section (eigenständig, aufgewertet 24.05.2026)
+         Quelle: 1KOMMA5°-Inspiration + Felix-Wording "Mitnetz / Hallesche Stadtwerke"
+         Psychologische Hebel:
+         - Lokal-Bias (regional verbindlich, vor Ort)
+         - Availability Heuristic (Städte-Liste = vertraute Namen)
+         - Authority (eigene Anmeldung beim Netzbetreiber) -->
+    <section class="region-section section-compact" id="region">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Wo wir sind</span>
+                <h2>In Mitteldeutschland für Sie da</h2>
+                <p class="section-desc">Eigenes Lager nahe Bitterfeld, eigene Monteure, eigene Wege. Wir sind die Region — nicht ein Vertrieb aus dem nächsten Bundesland.</p>
+            </div>
+
+            <div class="region-map-card region-map-card-section" data-placeholder="true">
+                <div class="region-map-content">
+                    <h3>Hier sind wir zuhause</h3>
+                    <p>Von unserem Standort nahe Bitterfeld betreuen wir Eigenheim-Besitzer in <strong>Sachsen-Anhalt, Sachsen und Thüringen</strong>. Der markierte Bereich zeigt unser 50-Kilometer-Kernservicegebiet — auf Anfrage fahren wir auch weiter.</p>
+                    <ul class="region-map-cities">
+                        <li>Leipzig</li>
+                        <li>Halle</li>
+                        <li>Dessau</li>
+                        <li>Bitterfeld</li>
+                        <li>Wittenberg</li>
+                        <li>Muldestausee</li>
+                    </ul>
+                    <div class="region-trust-points">
+                        <div class="region-trust-point">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="9 12 11 14 15 10"/>
+                            </svg>
+                            <span>Anmeldung beim Netzbetreiber (Mitnetz, Hallesche Stadtwerke) übernehmen wir komplett</span>
+                        </div>
+                        <div class="region-trust-point">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="9 12 11 14 15 10"/>
+                            </svg>
+                            <span>Selbstabholung am Lager nahe Bitterfeld jederzeit möglich</span>
+                        </div>
+                        <div class="region-trust-point">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="9 12 11 14 15 10"/>
+                            </svg>
+                            <span>200+ Anlagen in der Region installiert</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="region-map-visual">
+                    <div id="region-map" class="region-map-leaflet" aria-label="Karte des Servicegebiets in Mitteldeutschland" hidden></div>
+                    <div id="region-map-blocked" class="region-map-blocked">
+                        <svg class="region-map-blocked-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <h4>Karte aktuell nicht geladen</h4>
+                        <p>Die Region-Karte nutzt OpenStreetMap und Leaflet (externe Dienste). Aktivieren Sie funktionale Cookies, um die Karte anzuzeigen.</p>
+                        <button type="button" class="region-map-blocked-btn" id="region-map-activate">Karte aktivieren</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase — DEAKTIVIERT 12.06.2026: Video-Datei media/iStock-1718300217.mp4 fehlt im Ordner.
+         Felix-Vorgabe (Meeting 02.06.): Platzhalter als Code-Kommentar lassen, bis Patricks echtes Drohnenvideo da ist.
+    <section class="video-showcase-section section-compact" id="video-showcase">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Einblicke</span>
+                <h2>Sehen Sie uns bei der Arbeit</h2>
+            </div>
+            <div class="video-showcase">
+                <div class="video-wrapper" id="showcase-video-wrapper">
+                    <div class="video-poster" id="video-poster">
+                        <img src="media/besa-anlage-carport-echt.webp" alt="BESA-Carport mit vollflächiger Photovoltaikanlage und BESA-Fahrzeug" loading="lazy"
+                            class="poster-img">
+                        <button class="play-btn" id="play-showcase" aria-label="Video abspielen">
+                            <svg viewBox="0 0 64 64" fill="none" width="64" height="64">
+                                <circle cx="32" cy="32" r="30" fill="rgba(242,1,0,0.9)" />
+                                <polygon points="26,20 48,32 26,44" fill="white" />
+                            </svg>
+                        </button>
+                    </div>
+                    <video class="showcase-video" id="showcase-video" preload="none" playsinline controls>
+                        <source src="media/iStock-1718300217.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    Ende Video Showcase -->
+
+    <!-- 5-Schritte-Prozess (Felix' Copy aus FRAGEN-FELIX E1/E2/E3 + Anfrage + Wartung)
+         Eingebaut 24.05.2026 — Felix-Direktwunsch Meeting 20.05.
+         Psychologische Hebel:
+         - Risk Reversal (Aufwand transparent, schlüsselfertig)
+         - Authority Bias (eigene Monteure, eigenes Lager, eigener Elektriker)
+         - Loss Aversion (Verantwortung bleibt in einer Hand) -->
+    <section class="process-5-section section-compact" id="prozess">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Ihr Weg zur Anlage</span>
+                <h2>In 5 Schritten zu Ihrer Solaranlage</h2>
+                <p class="section-desc">Vom Erstkontakt bis zum sauberen Strom — schlüsselfertig und mit unseren eigenen Monteuren auf dem Dach.</p>
+            </div>
+
+            <div class="process-5-layout">
+            <ol class="process-5-list">
+                <li class="process-5-item">
+                    <div class="process-5-num">01</div>
+                    <div class="process-5-content">
+                        <h3 class="process-5-title">Anfrage stellen</h3>
+                        <p class="process-5-body">Solarrechner ausfüllen oder direkt anrufen. Wir melden uns innerhalb von 1–2 Werktagen mit einem Terminvorschlag.</p>
+                        <p class="process-5-effort"><span aria-hidden="true">⏱</span> Aufwand für Sie: 5 Minuten</p>
+                    </div>
+                </li>
+                <li class="process-5-item">
+                    <div class="process-5-num">02</div>
+                    <div class="process-5-content">
+                        <h3 class="process-5-title">Vor-Ort-Termin</h3>
+                        <p class="process-5-body">Ein Besa-Berater kommt zu Ihnen nach Hause. Wir besprechen Ihren Bedarf, prüfen Dachflächen und Stromverbrauch — und klären, ob auch Stromspeicher, Wallbox oder eine Elektromodernisierung sinnvoll sind.</p>
+                        <p class="process-5-effort"><span aria-hidden="true">⏱</span> Aufwand für Sie: ca. 60 Minuten</p>
+                    </div>
+                </li>
+                <li class="process-5-item">
+                    <div class="process-5-num">03</div>
+                    <div class="process-5-content">
+                        <h3 class="process-5-title">Individuelles Angebot</h3>
+                        <p class="process-5-body">Im Nachgang gehen wir in die konkrete Planung und Kalkulation. Sie erhalten Ihr persönliches Angebot zeitnah per E-Mail — auf Basis echter Bedarfsanalyse, nicht Standardpaketen.</p>
+                        <p class="process-5-effort"><span aria-hidden="true">⏱</span> Aufwand für Sie: keiner</p>
+                    </div>
+                </li>
+                <li class="process-5-item">
+                    <div class="process-5-num">04</div>
+                    <div class="process-5-content">
+                        <h3 class="process-5-title">Montage & Anschluss</h3>
+                        <p class="process-5-body">Nach Beauftragung bestellen wir das Material aus unserem Lager. Den Gerüstbau übernehmen wir komplett selbst, die Installation unsere eigenen Monteure, den Anschluss unser Elektriker. Bei einem typischen Einfamilienhaus dauert das 3–4 Tage. Besenrein, ohne Kabelreste auf dem Dach.</p>
+                        <p class="process-5-effort"><span aria-hidden="true">⏱</span> Aufwand für Sie: Zugang zum Dach</p>
+                    </div>
+                </li>
+                <li class="process-5-item">
+                    <div class="process-5-num">05</div>
+                    <div class="process-5-content">
+                        <h3 class="process-5-title">Anmeldung & Wartung</h3>
+                        <p class="process-5-body">Wir übernehmen alle Anmeldungen — beim Netzbetreiber (Mitnetz, Hallesche Stadtwerke) und im Marktstammdatenregister. Auf Wunsch dauerhaftes Online-Monitoring im Wartungsvertrag — wir sehen Probleme, bevor Sie etwas merken.</p>
+                        <p class="process-5-effort"><span aria-hidden="true">⏱</span> Aufwand für Sie: einmal zur Inbetriebnahme dabei sein</p>
+                    </div>
+                </li>
+            </ol>
+            </div>
+
+            <div class="process-5-cta">
+                <a href="#formular" class="btn btn-primary">Jetzt Anfrage starten</a>
+                <span class="process-5-cta-note">Kostenloser Vor-Ort-Termin · Unverbindlich</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Häufige Fragen</span>
+                <h2>Die wichtigsten Antworten für Sie</h2>
+            </div>
+            <div class="faq-list" id="faq-list">
+
+                <!-- 1. Kosten -->
+                <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Was kostet eine PV-Anlage ungefähr?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <div class="faq-answer">
+                        <p>Die Spanne ist groß - eine schlüsselfertige <strong>6-kWp-Anlage ohne Speicher</strong> beginnt bei rund <strong>9.000 €</strong>, eine <strong>10-kWp-Anlage mit 10-kWh-Speicher</strong> liegt typisch zwischen <strong>18.000 € und 25.000 €</strong>. Der Preis hängt von Anlagengröße, Speichergröße, Dachform, Ausrichtung und Zubehör (Wallbox, Notstrom) ab. Beim kostenlosen Vor-Ort-Termin bekommen Sie einen <strong>verbindlichen Festpreis</strong> - keine Überraschungen am Ende. Seit 2023 fällt für Anlagen unter 30 kWp keine Mehrwertsteuer mehr an, das macht den Einstieg günstiger als je zuvor.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Lohnt sich -->
+                <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Lohnt sich eine PV-Anlage finanziell?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <div class="faq-answer">
+                        <p>Eine typische 10-kWp-Anlage zahlt sich in <strong>9–12 Jahren</strong> ab. Danach produziert sie weitere <strong>15–20 Jahre kostenlos Strom</strong> - die Module sind in der Regel auf 25+ Jahre Leistung garantiert. Über die <strong>Einspeisevergütung</strong> (aktuell 8,03 ct/kWh für Anlagen ≤ 10 kWp) vergütet der Netzbetreiber, was Sie nicht selbst verbrauchen. Bei steigenden Strompreisen verkürzt sich die Amortisation entsprechend - wer 2025 startet, profitiert oft schneller als noch vor wenigen Jahren.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Dach geeignet -->
+                <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Ist mein Dach für eine PV-Anlage geeignet?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <div class="faq-answer">
+                        <p>Die meisten Dächer sind geeignet - entscheidend sind <strong>Ausrichtung, Neigung und Verschattung</strong>. Ideal ist Süd mit 30–35°, aber auch Ost-West-Anlagen erreichen rund <strong>90 % des Optimums</strong>. Flachdächer funktionieren mit Aufständerung. Auch ältere Dächer prüfen wir vor Ort - bei <strong>Asbest oder Eternit</strong> lohnt sich häufig eine Sanierung im selben Zug, weil dann auch die Statik gleich überprüft wird. Bei der kostenlosen Vor-Ort-Bewertung schauen wir uns Dachstatik, Eindeckung und Verschattung gemeinsam an.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Förderungen -->
+                <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Welche Förderungen kann ich nutzen?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <div class="faq-answer">
+                        <p>Die wichtigste Vergünstigung gilt automatisch: <strong>0 % Mehrwertsteuer</strong> auf Anlagen unter 30 kWp inkl. Speicher. Für die Finanzierung bietet die <strong>KfW über das Programm 270</strong> zinsgünstige Kredite. In Sachsen-Anhalt und Sachsen gibt es zeitweise <strong>Landesprogramme für Speicher und Energieberatung</strong> - die Töpfe sind oft schnell ausgeschöpft. Wir prüfen bei jedem Angebot, was zu Ihrem Vorhaben passt, und kümmern uns auf Wunsch um die Antragstellung.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Speicher -->
+                <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Brauche ich einen Stromspeicher?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <div class="faq-answer">
+                        <p>Pflicht ist er nicht - sinnvoll meist schon. Ohne Speicher liegt Ihr <strong>Eigenverbrauch typisch bei 25–35 %</strong>, mit Speicher bei <strong>60–80 %</strong>. Das heißt: Sie kaufen weniger teuren Netzstrom dazu und sparen mehr. Speicher rechnen sich besonders, wenn Sie tagsüber wenig zu Hause sind, eine Wärmepumpe planen oder unabhängiger sein wollen - etwa für den <strong>Inselbetrieb bei Stromausfall</strong>. Wir rechnen Ihnen die Wirtschaftlichkeit beider Varianten konkret durch, bevor Sie entscheiden.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Installation -->
+                <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Wie lange dauert die Installation?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <div class="faq-answer">
+                        <p>Die reine <strong>Montage dauert 1–3 Tage</strong>, je nach Anlagengröße und Dachkomplexität. Vom Erstgespräch bis zur fertigen Anlage vergehen in der Regel <strong>4–8 Wochen</strong> - inklusive Planung, Genehmigung und Netzanmeldung. Wir kümmern uns um den gesamten Papierkram: Anmeldung beim Netzbetreiber, Marktstammdatenregister und ggf. Bauanzeige. So können Sie sich entspannt zurücklehnen.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Überschüssiger Strom -->
+                <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Was passiert mit überschüssigem Strom?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <div class="faq-answer">
+                        <p>Überschüssiger Strom geht automatisch ins öffentliche Netz und wird über die <strong>Einspeisevergütung</strong> vergütet - aktuell 8,03 ct/kWh für Anlagen ≤ 10 kWp, festgeschrieben für 20 Jahre ab Inbetriebnahme. Spannender ist aber der <strong>Eigenverbrauch</strong>: Mit einem Batteriespeicher steigern Sie ihn von typisch 30 % auf <strong>70–80 %</strong> und nutzen Ihren Strom abends und nachts. Das ist meist der größere finanzielle Hebel als die Einspeisung.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Garantien -->
+                <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Welche Garantien gibt es auf Module, Wechselrichter und Speicher?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <div class="faq-answer">
+                        <p>PV-<strong>Module</strong> haben in der Regel <strong>25 Jahre Leistungsgarantie</strong> (mindestens 80–87 % der Nennleistung) und 12–15 Jahre Produktgarantie. <strong>Wechselrichter</strong> sind meist 10 Jahre, <strong>Speicher</strong> 10 Jahre garantiert. Hinzu kommt unsere zweijährige Werkstatt-Gewährleistung auf die Montage. Wir setzen auf bewährte Marken (z. B. SMA, Fronius, BYD) - keine Billigmodule. Sie bekommen alle Datenblätter und Garantiebedingungen schwarz auf weiß zum Angebot dazu.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Wartung & Service -->
+                <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Wie ist die Wartung geregelt - und was passiert nach der Installation?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <div class="faq-answer">
+                        <p>Eine PV-Anlage ist <strong>sehr wartungsarm</strong> - keine beweglichen Teile am Dach. Wir empfehlen einen Wartungs-Check alle <strong>4–6 Jahre</strong>, um Verschmutzung, Verkabelung und Wechselrichter-Daten zu prüfen. Die <strong>erste Wartung bei BESA ist gratis</strong>, wenn Kauf und Montage über uns laufen. Wenn unterwegs etwas auffällt - etwa eine ungewöhnliche Ertragskurve in der App - melden Sie sich. Kein Ticketsystem, kein Callcenter: bei uns geht jemand ans Telefon, der Sie und Ihre Anlage kennt.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Schaden / Versicherung -->
+                <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Was, wenn die Anlage durch Sturm, Hagel oder Brand beschädigt wird?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <div class="faq-answer">
+                        <p>PV-Anlagen sind robust - Module sind so gebaut, dass sie <strong>Hagelkörnern bis ca. 25 mm Durchmesser</strong> standhalten. Trotzdem empfehlen wir, die Anlage in die <strong>Wohngebäudeversicherung</strong> aufzunehmen oder eine separate Photovoltaik-Versicherung abzuschließen (oft schon ab ca. 80 €/Jahr). Bei Sturm- oder Hagelschäden übernimmt die Versicherung Reparatur oder Ersatz. Wir helfen bei Bedarf bei der Schadensaufnahme und liefern Fotos und Dokumentation für die Versicherung.</p>
+                    </div>
+                </div>
+
+                <!-- 11. Ertrag geringer als prognostiziert -->
+                <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Was, wenn der Ertrag geringer ausfällt als prognostiziert?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <div class="faq-answer">
+                        <p>Unsere Ertragsprognose basiert auf Standortdaten, Dachausrichtung und meteorologischen Langzeitwerten - das ist erfahrungsgemäß realistisch, aber kein Versprechen aufs Kilowattstunde-Komma. <strong>Schwankungen ±10 %</strong> zwischen einzelnen Jahren sind normal (Wetter, Verschmutzung, Sonnenstand). Wenn der Ertrag dauerhaft deutlich unter Prognose liegt, schauen wir uns die Anlage an - meist ist es Verschmutzung, ein Modul-Defekt oder ein Wechselrichter-Problem. Beides ist über <strong>Garantie oder Wartung</strong> abgedeckt.</p>
+                    </div>
+                </div>
+
+                <!-- 12. Erweiterung -->
+                <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Kann ich die Anlage später erweitern - Speicher, Wallbox, Wärmepumpe?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <div class="faq-answer">
+                        <p>Ja, in den meisten Fällen problemlos. <strong>Speicher lassen sich oft nachrüsten</strong> - entscheidend ist, ob der Wechselrichter dafür ausgelegt ist. Eine <strong>Wallbox fürs E-Auto</strong> integriert sich heute reibungslos in fast jede Anlage. Auch eine <strong>Erweiterung der Modulfläche</strong> ist möglich, wenn das Dach Platz hat und der Wechselrichter mitmacht. Tipp: Wer schon beim Erstkauf weiß, dass später ein E-Auto oder eine Wärmepumpe kommt, sollte das in der Planung berücksichtigen - wir denken solche Optionen mit.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Mobile-only: weitere Fragen einklappen -->
+            <button type="button" class="faq-show-more" id="faq-show-more" aria-expanded="false" aria-controls="faq-list">
+                <span class="faq-show-more-label">Weitere Fragen anzeigen</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Kontakt & Formular (kombiniert) -->
+    <section class="contact-form-section" id="kontakt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Kontakt</span>
+                <h2>Unverbindlich anfragen</h2>
+                <p class="section-desc">Wir melden uns innerhalb von 1–2 Werktagen bei Ihnen – persönlich und vor Ort.
+                </p>
+            </div>
+            <div class="contact-form-grid">
+                <!-- Linke Seite: Kontaktinfos -->
+                <div class="contact-info-side">
+                    <h2>Ihr regionaler Ansprechpartner</h2>
+                    <p>Persönlich, kompetent, vor Ort.</p>
+                    <div class="contact-details">
+                        <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <div><strong>BESA energy</strong><br>Neuwerk 5<br>06774 Muldestausee</div>
+                        </div>
+                        <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <div>
+                                <a href="tel:+493493510173">+49 3493 / 510173</a>
+                                <!-- TODO: Anrufzeiten mit Felix verifizieren (vorläufig aus Schema.org) -->
+                                <small class="contact-hours">Mo–Do 8–15 Uhr · Fr 8–14 Uhr</small>
+                            </div>
+                        </div>
+                        <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <div><a href="mailto:mail@besa.energy">mail@besa.energy</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-cta-box">
+                        <h3>Lieber kurz anrufen?</h3>
+                        <p>Wir klären Ihre Fragen auch gerne persönlich am Telefon.</p>
+                        <a href="tel:+493493510173" class="btn btn-primary">Jetzt anrufen</a>
+                    </div>
+                </div>
+                <!-- Rechte Seite: Formular -->
+                <div class="form-side" id="formular">
+                    <div class="form-header">
+                        <h2>Kostenloses Angebot anfragen</h2>
+                        <p>Füllen Sie das Formular aus – wir melden uns schnellstmöglich.</p>
+                    </div>
+                    <form id="lead-form" class="lead-form" novalidate>
+                        <!-- Honeypot: für Menschen unsichtbar, Bots füllen es aus. -->
+                        <!-- Wird beim Submit serverseitig in main.js geprüft.       -->
+                        <div class="hp-field" aria-hidden="true">
+                            <label for="hp-website">Bitte nicht ausfüllen - Website</label>
+                            <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><label for="vorname">Vorname *</label><input type="text"
+                                    id="vorname" name="vorname" required></div>
+                            <div class="form-group"><label for="nachname">Nachname *</label><input type="text"
+                                    id="nachname" name="nachname" required></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><label for="telefon">Telefon *</label><input type="tel" id="telefon"
+                                    name="telefon" required></div>
+                            <div class="form-group"><label for="email">E-Mail</label><input type="email" id="email"
+                                    name="email"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><label for="plz">PLZ *</label><input type="text" id="plz" name="plz"
+                                    required pattern="[0-9]{5}" maxlength="5"></div>
+                            <div class="form-group"><label for="ort">Ort</label><input type="text" id="ort" name="ort"></div>
+                        </div>
+                        <div class="form-group"><label for="nachricht">Ihre Nachricht (optional)</label><textarea
+                                id="nachricht" name="nachricht" rows="3"
+                                placeholder="Beschreiben Sie kurz Ihr Vorhaben..."></textarea></div>
+                        <div class="form-group"><label class="checkbox-label"><input type="checkbox" name="dsgvo"
+                                    required><span>Ich stimme der <a href="datenschutz.html"
+                                        target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> zu und bin
+                                    damit einverstanden,
+                                    kontaktiert
+                                    zu werden. *</span></label></div>
+                        <button type="submit" class="btn btn-primary btn-large btn-full" id="submit-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20"
+                                height="20">
+                                <path d="M22 2L11 13"></path>
+                                <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                            </svg>
+                            Kostenloses Angebot anfragen
+                        </button>
+                        <ul class="form-trust">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Antwort innerhalb von 1–2 Werktagen
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Ihre Daten werden nicht weitergegeben
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                100 % unverbindlich und kostenlos
+                            </li>
+                        </ul>
+                    </form>
+                    <div id="form-success" class="form-success" style="display:none;">
+                        <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg></div>
+                        <h3>Vielen Dank für Ihre Anfrage!</h3>
+                        <p>Wir melden uns innerhalb von 1–2 Werktagen bei Ihnen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo"><img src="media/logo-white.svg" alt="BESA energy" loading="lazy"
+                            class="logo-img logo-white"></a>
+                    <p>Ihr Partner für ganzheitliche Solarstrom-Lösungen in der Region Leipzig, Halle, Dessau und
+                        Bitterfeld. Über 30 Jahre Erfahrung – regional und persönlich.</p>
+                    <div class="footer-contact"><a href="tel:+493493510173" class="footer-phone"><svg
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"
+                                height="18">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>+49 3493 / 510173</a></div>
+                </div>
+                <div class="footer-links">
+                    <h4>Leistungen</h4>
+                    <ul>
+                        <li><a href="leistungen/privat.html">Privatkunden</a></li>
+                        <li><a href="leistungen/gewerbe.html">Gewerbe</a></li>
+                        <li><a href="leistungen/energieversorger.html">Energieversorger</a></li>
+                        <li><a href="notstrom.html">Notstrom / Blackout</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="https://besa.energy/shop/photovoltaikanlage-mit-speicher-komplettpaket">PV
+                                Komplettanlagen</a></li>
+                        <li><a href="https://besa.energy/shop/Batteriespeicher">Stromspeicher</a></li>
+                        <li><a href="https://besa.energy/shop/wechselrichter">Wechselrichter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                        <li><a href="agb.html">AGB</a></li>
+                        <li><a href="widerruf.html">Widerrufsrecht</a></li>
+                        <li><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie-Einstellungen</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BESA energy. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta" id="sticky-cta">
+        <div class="sticky-cta-btns">
+            <a href="#formular" class="btn btn-primary sticky-cta-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Kostenloses Angebot
+            </a>
+            <a href="tel:+493493510173" class="btn btn-outline-dark sticky-cta-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                Anrufen
+            </a>
+        </div>
+        <!-- TODO: Anrufzeiten mit Felix verifizieren (vorläufig aus Schema.org) -->
+        <span class="sticky-cta-hours">Mo–Do 8–15 Uhr · Fr 8–14 Uhr</span>
+    </div>
+
+    <script src="js/cookie-consent.js?v=20260615"></script>
+    <script src="js/main.js?v=20260615"></script>
+</body>
+
+</html>

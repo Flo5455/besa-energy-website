@@ -1,0 +1,154 @@
+/* ============================================================
+   PRIVAT — Sektions-Styles (15.06.2026)
+   Geladen von leistungen/privat.html. Gezielte Aufwertungen
+   nach Florian-Feedback: (1) Wirtschaftlichkeit dunkel, (2) Montage-Banner
+   mit Lamp-Leuchten, (3) Rechenbeispiel als Rechen-Kette mit Ergebnis.
+   Eigene Präfixe (pr-), Marken-Tokens aus styles.css.
+   ============================================================ */
+
+/* ========== 1) WIRTSCHAFTLICHKEIT — dunkler Abschnitt (visuelle Trennung) ========== */
+.split-section.pr-dark {
+    background: linear-gradient(135deg, var(--color-anthracite) 0%, #2a2c2e 100%);
+}
+.pr-dark .split-content .section-label {
+    background: rgba(91, 167, 209, 0.2);
+    color: var(--color-steel-blue-light);
+}
+.pr-dark .split-content h2 { color: var(--color-white); }
+.pr-dark .split-content p { color: rgba(255, 255, 255, 0.78); }
+.pr-dark .split-content ul li,
+.pr-dark .split-content ul li > div { color: rgba(255, 255, 255, 0.82); }
+.pr-dark .split-content ul li strong { color: var(--color-white); }
+.pr-dark .split-content ul li svg { color: var(--color-steel-blue-light); }
+.pr-dark .split-image { box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45); }
+
+/* ========== 2) MONTAGE-BANNER — Lamp-Leuchten statt Foto, mehr Raum ========== */
+.pr-lamp-banner {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: #0a0b0c;
+    padding: 120px 24px;
+    text-align: center;
+}
+.pr-lamp-banner::before,
+.pr-lamp-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 20rem;
+    width: 28rem;
+    z-index: -1;
+    filter: blur(45px);
+    opacity: 0.5;
+    pointer-events: none;
+}
+.pr-lamp-banner::before {
+    right: 50%;
+    background-image: conic-gradient(from 70deg at center top, rgba(91, 167, 209, 0.6), transparent 72%);
+}
+.pr-lamp-banner::after {
+    left: 50%;
+    background-image: conic-gradient(from 290deg at center top, transparent 28%, rgba(91, 167, 209, 0.6));
+}
+.pr-lamp-banner .pr-lamp-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 26rem;
+    max-width: 72%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-steel-blue-light), transparent);
+    box-shadow: 0 0 32px 6px rgba(138, 198, 232, 0.5);
+    z-index: -1;
+}
+.pr-lamp-banner h3 {
+    margin: 0 auto;
+    max-width: 22ch;
+    font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    background: linear-gradient(180deg, #ffffff 40%, #9fb4c2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.pr-lamp-banner p {
+    margin: 16px auto 0;
+    max-width: 52ch;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 1.02rem;
+    line-height: 1.6;
+}
+
+/* ========== 3) RECHENBEISPIEL — Rechen-Kette mit hervorgehobenem Ergebnis ========== */
+.pr-calc {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 48px;
+    flex-wrap: wrap;
+}
+.pr-calc-step {
+    flex: 1 1 220px;
+    max-width: 280px;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    padding: 28px 22px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pr-calc-ico {
+    width: 46px;
+    height: 46px;
+    border-radius: var(--radius-md);
+    background: rgba(91, 167, 209, 0.12);
+    color: var(--color-steel-blue-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+.pr-calc-ico svg { width: 24px; height: 24px; }
+.pr-calc-val {
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: var(--color-steel-blue-dark);
+}
+.pr-calc-lbl {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--color-gray-500);
+}
+/* Operator zwischen den Schritten (× / =) */
+.pr-calc-op {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-steel-blue);
+    flex: 0 0 auto;
+}
+/* Ergebnis-Schritt hervorgehoben */
+.pr-calc-step.pr-calc-result {
+    background: linear-gradient(160deg, var(--color-steel-blue-dark) 0%, var(--color-steel-blue) 100%);
+    border-color: transparent;
+    box-shadow: 0 16px 40px rgba(91, 167, 209, 0.3);
+}
+.pr-calc-result .pr-calc-ico { background: rgba(255, 255, 255, 0.18); color: #fff; }
+.pr-calc-result .pr-calc-val { color: #fff; }
+.pr-calc-result .pr-calc-lbl { color: rgba(255, 255, 255, 0.85); }
+
+@media (max-width: 760px) {
+    .pr-calc { flex-direction: column; align-items: center; gap: 8px; }
+    .pr-calc-step { max-width: 340px; width: 100%; }
+    .pr-calc-op { transform: rotate(90deg); }
+}

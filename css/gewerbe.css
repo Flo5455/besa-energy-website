@@ -1,0 +1,154 @@
+/* ============================================================
+   GEWERBE — Sektions-Styles (16.06.2026)
+   Geladen von leistungen/gewerbe.html. Zwei gezielte Aufwertungen
+   nach Florian-Feedback:
+   (1) Montage-Block als Lamp-Leuchten (statt Foto-Banner mit Overlay),
+   (2) Praxisbeispiele als alternierende Foto-Text-Zeilen (statt Karten).
+   Eigene Präfixe (gw-), Marken-Tokens aus styles.css.
+   ============================================================ */
+
+/* ========== 1) MONTAGE — Lamp-Banner (Aceternity-Lamp als reines CSS, Licht von oben) ==========
+   Lichtkegel = zwei gespiegelte conic-gradients + helle "Lampen-Linie" mit Glow,
+   auf sehr dunklem Grund. Identische Mechanik wie notstrom/privat, eigener Präfix. */
+.gw-lamp-banner {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: #0a0b0c;
+    padding: 120px 24px;
+    text-align: center;
+}
+.gw-lamp-banner::before,
+.gw-lamp-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 20rem;
+    width: 28rem;
+    z-index: -1;
+    filter: blur(45px);
+    opacity: 0.5;
+    pointer-events: none;
+}
+.gw-lamp-banner::before {
+    right: 50%;
+    background-image: conic-gradient(from 70deg at center top, rgba(91, 167, 209, 0.6), transparent 72%);
+}
+.gw-lamp-banner::after {
+    left: 50%;
+    background-image: conic-gradient(from 290deg at center top, transparent 28%, rgba(91, 167, 209, 0.6));
+}
+.gw-lamp-banner .gw-lamp-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 26rem;
+    max-width: 72%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-steel-blue-light), transparent);
+    box-shadow: 0 0 32px 6px rgba(138, 198, 232, 0.5);
+    z-index: -1;
+}
+.gw-lamp-banner .gw-lamp-eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-steel-blue-light);
+}
+.gw-lamp-banner h3 {
+    margin: 0 auto;
+    max-width: 22ch;
+    font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    background: linear-gradient(180deg, #ffffff 40%, #9fb4c2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.gw-lamp-banner p {
+    margin: 16px auto 0;
+    max-width: 54ch;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 1.02rem;
+    line-height: 1.6;
+}
+
+/* ========== 2) PRAXISBEISPIELE — alternierende Foto-Text-Zeilen (statt 3er-Karten-Grid) ========== */
+.gw-userows {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.gw-userow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+/* jede zweite Zeile spiegeln (Foto rechts) */
+.gw-userow:nth-child(even) {
+    direction: rtl;
+}
+.gw-userow:nth-child(even) > * {
+    direction: ltr;
+}
+.gw-userow-img {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 16 / 11;
+    box-shadow: var(--shadow-card);
+}
+.gw-userow-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.gw-userow-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(91, 167, 209, 0.14);
+    color: var(--color-steel-blue-dark);
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+.gw-userow-text h3 {
+    margin: 0 0 12px;
+    font-size: 1.4rem;
+    color: var(--color-anthracite);
+}
+.gw-userow-text p {
+    margin: 0;
+    color: var(--color-gray-500);
+    line-height: 1.7;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 860px) {
+    .gw-userow,
+    .gw-userow:nth-child(even) {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 20px;
+    }
+    .gw-userow-img {
+        aspect-ratio: 16 / 9;
+        max-height: 260px;
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .gw-lamp-banner {
+        padding: 90px 20px;
+    }
+}

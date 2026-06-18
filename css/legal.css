@@ -1,0 +1,193 @@
+/* ============================================================
+   BESA Energy — Legal Pages (Datenschutz, AGB, Impressum etc.)
+   Schlanker Lese-Layout im Stil der Landingpage.
+   ============================================================ */
+
+/* Hero-Streifen */
+.legal-hero {
+    background: var(--color-anthracite);
+    color: var(--color-white);
+    padding: 6rem 0 3.5rem;
+    margin-top: 80px; /* Header-Offset, falls Header sticky ist */
+}
+
+.legal-hero .section-label {
+    color: var(--color-steel-blue-light);
+}
+
+.legal-hero h1 {
+    color: var(--color-white);
+    font-size: clamp(2rem, 4vw + 1rem, 3.25rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin: 0.5rem 0 1rem;
+}
+
+.legal-hero-meta {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9375rem;
+    margin: 0;
+}
+
+/* Content-Bereich */
+.legal-content {
+    padding: 4rem 0 6rem;
+    background: var(--color-white);
+}
+
+.legal-content .container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 4rem;
+    align-items: flex-start;
+    max-width: 1100px;
+}
+
+/* Inhaltsverzeichnis (Sticky-Sidebar auf Desktop) */
+.legal-toc {
+    position: sticky;
+    top: 100px;
+    background: var(--color-gray-50);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    border: 1px solid var(--color-gray-200);
+    font-size: 0.9375rem;
+}
+
+.legal-toc h2 {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-500);
+    margin: 0 0 1rem;
+    font-weight: 700;
+}
+
+.legal-toc ol {
+    list-style: none;
+    counter-reset: toc;
+    padding: 0;
+    margin: 0;
+}
+
+.legal-toc li {
+    counter-increment: toc;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--color-gray-200);
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.legal-toc li:last-child {
+    border-bottom: none;
+}
+
+.legal-toc a {
+    color: var(--color-anthracite);
+    text-decoration: none;
+    display: block;
+}
+
+.legal-toc a:hover {
+    color: var(--color-steel-blue-dark);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* Artikel-Inhalt */
+.legal-article {
+    color: var(--color-gray-700);
+    line-height: 1.7;
+    font-size: 1rem;
+    max-width: 720px;
+}
+
+.legal-article h2 {
+    color: var(--color-anthracite);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    padding-top: 0.5rem;
+    letter-spacing: -0.01em;
+    scroll-margin-top: 100px;
+}
+
+.legal-article h2:first-child {
+    margin-top: 0;
+}
+
+.legal-article p {
+    margin: 0 0 1rem;
+}
+
+.legal-article ul {
+    padding-left: 1.25rem;
+    margin: 0 0 1.25rem;
+}
+
+.legal-article ul li {
+    margin-bottom: 0.4rem;
+}
+
+.legal-article a {
+    color: var(--color-steel-blue-dark);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+}
+
+.legal-article a:hover {
+    text-decoration-thickness: 2px;
+}
+
+.legal-article strong {
+    color: var(--color-anthracite);
+    font-weight: 700;
+}
+
+.legal-article em {
+    font-style: normal;
+    background: var(--color-gray-100);
+    padding: 0.05em 0.4em;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+.legal-address {
+    font-style: normal;
+    background: var(--color-gray-50);
+    border-left: 3px solid var(--color-steel-blue);
+    padding: 1rem 1.25rem;
+    margin: 0 0 1.5rem;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    line-height: 1.6;
+}
+
+.legal-back {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-gray-200);
+    font-weight: 700;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .legal-content .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .legal-toc {
+        position: static;
+        order: 0;
+    }
+
+    .legal-hero {
+        padding: 4.5rem 0 2.5rem;
+    }
+
+    .legal-article h2 {
+        font-size: 1.3125rem;
+        margin-top: 2rem;
+    }
+}

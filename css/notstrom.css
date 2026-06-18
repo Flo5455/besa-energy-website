@@ -1,0 +1,430 @@
+/* ============================================================
+   NOTSTROM — Sektions-Styles (15.06.2026)
+   Geladen von notstrom.html. Ziel: Layout-Varianz gegen
+   die "Überschrift + Karten"-Monotonie. Eigene Präfixe (lamp-, nt-),
+   damit nichts auf andere Seiten abfärbt. Nutzt die Marken-Tokens aus
+   styles.css (:root) — Stahlblau-Akzent, Lato, radius.
+   ============================================================ */
+
+/* ========== 1) LAMP-STATEMENT (markanter Bruch, Aceternity-Adaption als reines CSS) ==========
+   Lichtkegel = zwei gespiegelte conic-gradients + helle "Lampen-Linie" mit Glow,
+   auf sehr dunklem Grund. Überschrift als heller Gradient-Text. */
+.lamp-statement {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: #0a0b0c;
+    padding: 150px 24px 120px;
+    text-align: center;
+}
+
+/* V-förmiger Lichtkegel (zwei konische Verläufe, an der Oberkante gespiegelt) */
+.lamp-statement::before,
+.lamp-statement::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 22rem;
+    width: 30rem;
+    z-index: -1;
+    filter: blur(45px);
+    opacity: 0.5;
+    pointer-events: none;
+}
+.lamp-statement::before {
+    right: 50%;
+    background-image: conic-gradient(from 70deg at center top, rgba(91, 167, 209, 0.65), transparent 72%);
+}
+.lamp-statement::after {
+    left: 50%;
+    background-image: conic-gradient(from 290deg at center top, transparent 28%, rgba(91, 167, 209, 0.65));
+}
+
+/* Helle Lampen-Linie + weicher Radial-Schein darüber */
+.lamp-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 28rem;
+    max-width: 76%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-steel-blue-light), transparent);
+    box-shadow: 0 0 34px 7px rgba(138, 198, 232, 0.55);
+    z-index: -1;
+}
+.lamp-statement .lamp-halo {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 38rem;
+    max-width: 90%;
+    height: 18rem;
+    background: radial-gradient(ellipse 50% 60% at 50% 0%, rgba(91, 167, 209, 0.22), transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.lamp-statement .lamp-eyebrow {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-steel-blue-light);
+}
+.lamp-statement h2 {
+    margin: 0 auto;
+    max-width: 16ch;
+    font-size: clamp(1.9rem, 4.5vw, 3.25rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    background: linear-gradient(180deg, #ffffff 30%, #9fb4c2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.lamp-statement p {
+    margin: 22px auto 0;
+    max-width: 46ch;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* ========== 2) VERTIKALE TIMELINE (statt Schritt-Karten) ========== */
+.nt-timeline {
+    max-width: 760px;
+    margin: 56px auto 0;
+    position: relative;
+}
+.nt-tl-step {
+    position: relative;
+    padding: 0 0 44px 84px;
+}
+.nt-tl-step:last-child {
+    padding-bottom: 0;
+}
+/* durchgehende Verbindungslinie */
+.nt-tl-step::before {
+    content: "";
+    position: absolute;
+    left: 27px;
+    top: 12px;
+    bottom: -12px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--color-steel-blue), rgba(91, 167, 209, 0.25));
+}
+.nt-tl-step:last-child::before {
+    display: none;
+}
+.nt-tl-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    border: 2px solid var(--color-steel-blue);
+    color: var(--color-steel-blue-dark);
+    box-shadow: 0 4px 14px rgba(91, 167, 209, 0.25);
+}
+.nt-tl-marker svg {
+    width: 26px;
+    height: 26px;
+}
+.nt-tl-num {
+    position: absolute;
+    left: 46px;
+    top: -6px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--color-steel-blue-dark);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nt-tl-step h4 {
+    margin: 6px 0 6px;
+    font-size: 1.2rem;
+    color: var(--color-anthracite);
+}
+.nt-tl-step p {
+    margin: 0;
+    color: var(--color-gray-500);
+    line-height: 1.65;
+}
+
+/* ========== 3) KOMPONENTEN — alternierende Bild(SVG)-Text-Zeilen ========== */
+.nt-feature-rows {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+.nt-feature-row {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 40px;
+}
+/* jede zweite Zeile spiegeln (Visual rechts) */
+.nt-feature-row:nth-child(even) {
+    direction: rtl;
+}
+.nt-feature-row:nth-child(even) > * {
+    direction: ltr;
+}
+.nt-feature-visual {
+    aspect-ratio: 16 / 10;
+    border-radius: var(--radius-lg);
+    background:
+        radial-gradient(ellipse at 50% 30%, rgba(91, 167, 209, 0.14) 0%, transparent 70%),
+        linear-gradient(160deg, #f5f8fb 0%, #e9f1f7 100%);
+    border: 1px solid var(--color-gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+}
+.nt-feature-visual svg {
+    width: 100%;
+    height: 100%;
+    max-width: 270px;
+    color: var(--color-steel-blue-dark);
+}
+.nt-feature-text .nt-step-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(91, 167, 209, 0.14);
+    color: var(--color-steel-blue-dark);
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+.nt-feature-text h3 {
+    margin: 0 0 10px;
+    font-size: 1.35rem;
+    color: var(--color-anthracite);
+}
+.nt-feature-text p {
+    margin: 0;
+    color: var(--color-gray-500);
+    line-height: 1.7;
+}
+
+/* ========== 4) ZAHLEN-BAND (dunkler Bruch mit animierten Zählern) ========== */
+.nt-stats {
+    background: linear-gradient(135deg, var(--color-anthracite) 0%, #2a2c2e 100%);
+    padding: 64px 0;
+}
+.nt-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+}
+.nt-stat-num {
+    font-size: clamp(2rem, 4vw, 2.9rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    background: linear-gradient(180deg, var(--color-steel-blue-light), var(--color-steel-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.nt-stat-label {
+    margin-top: 10px;
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.4;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 860px) {
+    .nt-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px 24px;
+    }
+    .nt-feature-row,
+    .nt-feature-row:nth-child(even) {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 20px;
+    }
+    .nt-feature-visual {
+        aspect-ratio: 16 / 9;
+        max-height: 240px;
+    }
+}
+@media (max-width: 600px) {
+    .lamp-statement {
+        padding: 110px 20px 80px;
+    }
+    .nt-tl-step {
+        padding-left: 70px;
+    }
+}
+
+/* ========== 5) KOSTEN-KARTE (aufgewertet: Preis-Panel + Preisspannen-Skala + Argument-Punkte) ========== */
+.nt-cost {
+    position: relative;
+    overflow: hidden;
+    max-width: 960px;
+    margin: 0 auto;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 48px;
+}
+/* dezenter Stahlblau-Akzentstreifen oben */
+.nt-cost::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-steel-blue-light), var(--color-steel-blue-dark));
+}
+.nt-cost-head {
+    text-align: center;
+    margin-bottom: 36px;
+}
+.nt-cost-head .section-label { display: inline-block; margin-bottom: 12px; }
+.nt-cost-head h2 { margin: 0; }
+
+.nt-cost-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Preis-Panel (getönt + Glow) */
+.nt-cost-panel {
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    text-align: center;
+    border: 1px solid rgba(91, 167, 209, 0.2);
+    background:
+        radial-gradient(ellipse 70% 60% at 50% 0%, rgba(91, 167, 209, 0.16), transparent 70%),
+        linear-gradient(160deg, #f5f8fb 0%, #e9f1f7 100%);
+}
+.nt-cost-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-steel-blue-dark);
+}
+.nt-cost-price {
+    font-size: clamp(2rem, 4.5vw, 2.9rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 10px 0 28px;
+    background: linear-gradient(180deg, var(--color-steel-blue), var(--color-steel-blue-dark));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+/* Preisspannen-Skala */
+.nt-cost-scale-bar {
+    position: relative;
+    height: 8px;
+    border-radius: 5px;
+    margin: 0 8px 14px;
+    background: linear-gradient(90deg, var(--color-steel-blue-light), var(--color-steel-blue-dark));
+}
+.nt-cost-dot {
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-white);
+    border: 3px solid var(--color-steel-blue-dark);
+    transform: translateY(-50%);
+}
+.nt-cost-dot-start { left: -4px; }
+.nt-cost-dot-end { right: -4px; }
+.nt-cost-scale-labels {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+.nt-cost-scale-labels > div { max-width: 47%; }
+.nt-cost-scale-labels .right { text-align: right; }
+.nt-cost-scale-labels strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--color-anthracite);
+}
+.nt-cost-scale-labels span {
+    font-size: 0.76rem;
+    color: var(--color-gray-500);
+    line-height: 1.3;
+}
+
+/* Argument-Punkte */
+.nt-cost-points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.nt-cost-points li {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+.nt-cost-ico {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-md);
+    background: rgba(91, 167, 209, 0.12);
+    color: var(--color-steel-blue-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nt-cost-ico svg { width: 22px; height: 22px; }
+.nt-cost-points li > div {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-gray-500);
+}
+.nt-cost-points strong { color: var(--color-anthracite); }
+
+@media (max-width: 760px) {
+    .nt-cost { padding: 32px 22px; }
+    .nt-cost-body { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* ========== 6) ÜBERSCHRIFTEN VEREINHEITLICHEN (15.06.) ==========
+   Alle Sektions-Hauptüberschriften auf eine Größe (≈48px / 3rem max).
+   Vorher: "So funktioniert" war ein kleiner h3 (26px), Lamp-H2 52px. */
+.blackout-system-section .blackout-steps-title {
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    line-height: 1.15;
+}
+.lamp-statement h2 {
+    font-size: clamp(1.9rem, 4vw, 3rem);
+}

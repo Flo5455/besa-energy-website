@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="380 460 100 150" preserveAspectRatio="xMidYMid meet"
+     role="img" aria-label="BESA Energy">
+  <title>BESA Energy</title>
+  <linearGradient id="favbolt" gradientUnits="userSpaceOnUse"
+                  x1="455.6078" y1="472.8174" x2="411.7652" y2="582.4239">
+    <stop offset="0" style="stop-color:#FF0000"/>
+    <stop offset="1" style="stop-color:#A40D0D"/>
+  </linearGradient>
+  <polygon fill="url(#favbolt)"
+           points="472.79,526.83 391.16,609.07 418.04,552.66 388.17,552.66 417.64,470.78 469.06,470.78 427.47,526.9"/>
+</svg>

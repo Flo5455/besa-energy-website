@@ -1,0 +1,30 @@
+# ── Netlify (lokaler CLI-State) ──
+.netlify/
+
+# ── Betriebssystem / Editor ──
+.DS_Store
+.claude/
+
+# ── HTML-/CSS-Sicherungen (ab jetzt übernimmt die git-Historie die Versionierung) ──
+*.bak
+*.bak-*
+*.backup
+*.backup-*
+
+# ── Interne Arbeitsdokumente (nicht für das öffentliche Web-Repo) ──
+_HANDOFF.md
+AUFGABEN.md
+BACKLOG-Navigation.md
+COPY.md
+EMAILJS-TEMPLATE-KARRIERE.md
+FRAGEN-FELIX.txt
+ROTER-FADEN-AUDIT.md
+SEO-GUIDELINES.md
+
+# ── Lokale Hilfsskripte / Tooling (nicht Teil der Website) ──
+scripts/
+optimize-media.bat
+
+# ── Test-/Build-Artefakte ──
+.playwright-mcp/
+node_modules/
