@@ -1924,17 +1924,28 @@ strong {
 .subpage-hero .container {
     position: relative;
     z-index: 1;
+    /* Hero-Text wie auf der Startseite einrücken (Felix 12.06.): schmalerer,
+       zentrierter Content-Block statt voller Breite → linksbündiger Text beginnt
+       eingerückt statt am Rand. Greift nur auf breiten Viewports (margin:auto vom
+       Standard-.container); mobil volle Breite. Einheitlich für alle Unterseiten. */
+    max-width: 900px;
 }
 
 .subpage-hero .hero-badge {
     margin-bottom: 16px;
-    /* Lesbar über hellen Foto-Heros (15.06.): deckend weißes Badge, grüne
-       Schrift + dünne grüne Umrandung. Überschreibt das transparente Grün
-       der Basis (.hero-badge), das über hellen Fotos verschwamm.
+    /* Lesbar über hellen Foto-Heros: deckend weißes Badge, Marken-Stahlblau
+       für Schrift, Rahmen und Icon (currentColor). 18.06.: von Grün auf
+       BESA-Stahlblau umgestellt (Grün war markenfremd).
        Gilt einheitlich für alle Unterseiten. */
     background: var(--color-white);
-    border: 3px solid #10B981;
-    color: #10B981;
+    border: 3px solid var(--color-steel-blue);
+    color: var(--color-steel-blue);
+}
+
+/* Badge-Icon ebenfalls Stahlblau. Nötig, weil die Basis-Regel `.hero-badge svg`
+   die SVG-Farbe direkt auf Grün setzt (schlägt die geerbte color des Badges). */
+.subpage-hero .hero-badge svg {
+    color: var(--color-steel-blue);
 }
 
 .subpage-hero h1 {
@@ -6666,4 +6677,211 @@ a.rating-summary:hover {
 @media (max-width: 600px) {
     .usecase-card { flex-basis: 100%; }
     .cost-box { padding: 28px 22px; }
+}
+
+/* ============================================================
+   BESA-Kompetenzverbund — Spinning-Logos-Kreis (Felix-Merge 28.06.)
+   Desktop: Icons rotieren auf Kreisbahn, Hover -> Titel+Text im Zentrum.
+   Mobile: Akkordeon (Tap klappt Text auf).
+   ============================================================ */
+.kompetenz-hub {
+    position: relative;
+    width: 100%;
+    max-width: 620px;
+    margin: 56px auto 0;
+    aspect-ratio: 1 / 1;
+    --orbit-r: 238px;
+    --spin-dur: 46s;
+}
+.kompetenz-hub::before {
+    content: "";
+    position: absolute;
+    top: 50%; left: 50%;
+    width: calc(var(--orbit-r) * 2);
+    height: calc(var(--orbit-r) * 2);
+    transform: translate(-50%, -50%);
+    border: 2px dashed var(--color-steel-blue-light);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+.kompetenz-center {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 232px;
+    height: 232px;
+    border-radius: 50%;
+    background: var(--color-steel-blue);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    box-shadow: 0 14px 34px rgba(63, 135, 176, 0.35);
+    z-index: 3;
+    transition: background 0.3s ease;
+}
+.kompetenz-center.is-active { background: var(--color-steel-blue-dark); }
+.kompetenz-center-default { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.kompetenz-center-default svg { width: 38px; height: 38px; stroke: var(--color-white); }
+.kompetenz-center-default span { font-weight: 700; font-size: 1rem; line-height: 1.2; }
+.kompetenz-center-hover { display: flex; flex-direction: column; gap: 8px; }
+.kompetenz-center-hover .kompetenz-center-title { font-size: 1rem; font-weight: 700; line-height: 1.25; color: var(--color-white); }
+.kompetenz-center-hover .kompetenz-center-text { font-size: 0.8rem; line-height: 1.4; opacity: 0.95; color: var(--color-white); }
+.kompetenz-center-default[hidden], .kompetenz-center-hover[hidden] { display: none; }
+
+.kompetenz-orbit {
+    position: absolute;
+    inset: 0;
+    animation: komp-spin var(--spin-dur) linear infinite;
+}
+.kompetenz-hub:hover .kompetenz-orbit { animation-play-state: paused; }
+.kompetenz-node {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 60px; height: 60px;
+    margin: -30px;
+    --angle: calc(var(--i) * 45deg);
+    transform: rotate(var(--angle)) translateY(calc(-1 * var(--orbit-r))) rotate(calc(-1 * var(--angle)));
+}
+.kompetenz-title { display: none; }
+.kompetenz-chevron { display: none; }
+.kompetenz-text { display: none; }
+.kompetenz-head {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    animation: komp-spin-rev var(--spin-dur) linear infinite;
+}
+.kompetenz-hub:hover .kompetenz-head { animation-play-state: paused; }
+.kompetenz-ico {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    box-shadow: 0 6px 16px rgba(54, 56, 58, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.kompetenz-ico svg { width: 28px; height: 28px; stroke: var(--color-steel-blue-dark); transition: stroke 0.2s ease; }
+.kompetenz-node:hover .kompetenz-ico {
+    transform: scale(1.12);
+    background: var(--color-steel-blue);
+    box-shadow: 0 10px 26px rgba(63, 135, 176, 0.42);
+}
+.kompetenz-node:hover .kompetenz-ico svg { stroke: var(--color-white); }
+
+@keyframes komp-spin { to { transform: rotate(360deg); } }
+@keyframes komp-spin-rev { to { transform: rotate(-360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+    .kompetenz-orbit, .kompetenz-head { animation: none; }
+}
+
+/* ---- Mobile / Tablet: Akkordeon ---- */
+@media (max-width: 860px) {
+    .kompetenz-hub {
+        position: static;
+        aspect-ratio: auto;
+        max-width: 560px;
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .kompetenz-hub::before { display: none; }
+    .kompetenz-center {
+        position: static;
+        transform: none;
+        width: auto;
+        height: auto;
+        border-radius: var(--radius-lg);
+        padding: 18px 20px;
+        margin-bottom: 4px;
+    }
+    .kompetenz-center.is-active { background: var(--color-steel-blue); }
+    .kompetenz-center-default { flex-direction: row; gap: 12px; }
+    .kompetenz-center-hover { display: none !important; }
+    .kompetenz-orbit {
+        position: static;
+        inset: auto;
+        animation: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .kompetenz-node {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        transform: none;
+        border: 1px solid var(--color-gray-200);
+        border-radius: var(--radius-md);
+        background: var(--color-white);
+        overflow: hidden;
+    }
+    .kompetenz-head {
+        animation: none;
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+        gap: 14px;
+        padding: 14px 16px;
+    }
+    .kompetenz-ico {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        flex-shrink: 0;
+        box-shadow: none;
+    }
+    .kompetenz-ico svg { width: 22px; height: 22px; }
+    .kompetenz-node:hover .kompetenz-ico { transform: none; background: var(--color-white); }
+    .kompetenz-node:hover .kompetenz-ico svg { stroke: var(--color-steel-blue-dark); }
+    .kompetenz-title {
+        display: block;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: var(--color-anthracite);
+        flex: 1;
+        text-align: left;
+    }
+    .kompetenz-chevron {
+        display: block;
+        width: 20px;
+        height: 20px;
+        stroke: var(--color-gray-400);
+        flex-shrink: 0;
+        transition: transform 0.25s ease;
+    }
+    .kompetenz-head[aria-expanded="true"] .kompetenz-chevron { transform: rotate(180deg); }
+    .kompetenz-text {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.28s ease;
+    }
+    .kompetenz-text > p {
+        overflow: hidden;
+        margin: 0;
+        padding: 0 16px;
+        font-size: 0.88rem;
+        line-height: 1.5;
+        color: var(--color-gray-500, #6b7280);
+    }
+    .kompetenz-node.is-open .kompetenz-text { grid-template-rows: 1fr; }
+    .kompetenz-node.is-open .kompetenz-text > p { padding-top: 4px; padding-bottom: 16px; }
 }

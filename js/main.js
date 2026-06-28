@@ -86,7 +86,7 @@ function initRegionMap() {
         // bewusst nicht zeigen wollen (politisch neutral bleiben).
         const map = L.map('region-map', {
             center: HOME,
-            zoom: 7,
+            zoom: 8, // 12.06.: einen Schritt näher (war 7) — 50-km-Kreis prominenter, Standort klarer
             scrollWheelZoom: false,
             zoomControl: true,
             attributionControl: false
@@ -416,13 +416,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const kwp = baseKwp;
         const ertrag = Math.round(kwp * 880 * orientFactor); // kWh/year – regional avg for Sachsen-Anhalt
-        const co2 = Math.round(ertrag * 0.4); // kg CO2
-        const savings = Math.round(ertrag * 0.38); // EUR savings (aktuelle Ø 0,38 €/kWh)
+        // 28.06. (Felix-Merge): feste Euro-Ersparnis und pauschaler CO2-Wert entfernt —
+        // Strompreis, Eigenverbrauch und Einspeisevergütung ändern sich; konkrete Werte erst im Angebot.
 
         document.getElementById('result-kwp').innerHTML = `${kwp} <span class="unit">kWp</span>`;
         document.getElementById('result-ertrag').innerHTML = `${ertrag.toLocaleString('de-DE')} <span class="unit">kWh</span>`;
-        document.getElementById('result-co2').innerHTML = `${co2.toLocaleString('de-DE')} <span class="unit">kg</span>`;
-        document.getElementById('result-savings-text').textContent = `Geschätzte Ersparnis: bis zu ${savings.toLocaleString('de-DE')} €/Jahr`;
+        document.getElementById('result-co2').textContent = 'individuell';
+        document.getElementById('result-savings-text').textContent = 'Konkrete Ersparnis berechnen wir mit Stromtarif, Eigenverbrauch und Einspeisevergütung.';
 
         // Show Nord warning if applicable
         const existingWarning = document.querySelector('.nord-warning');
